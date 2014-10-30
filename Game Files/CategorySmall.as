@@ -5,7 +5,9 @@
 	{
 		public var wordList:Array = new Array();
 
-		public function CategorySmall(categoryName:String)
+		public var num:uint = 1;
+
+		public function CategorySmall(categoryName:String):void
 		{
 			super(categoryName);
 		}
@@ -19,7 +21,10 @@
 		{
 			//Resets all of the arrays, in order for them to be written to
 			wordList.splice(0, wordList.length);
-			wordList = allWords;
+			for (var i:uint; i < allWords.length; i++)
+			{
+				wordList.push(allWords[i]);
+			}
 		}
 	}
 }

@@ -27,7 +27,6 @@
 
 		//Score
 		public var score:Score = new Score();
-		
 
 		//Constructor
 		public function Game(gameType:String):void
@@ -37,8 +36,8 @@
 			gameFrameName = "Game_" + gameType;
 			settingsFrameName = "Settings_" + gameType;
 		}
-		
-		
+
+
 		//Property editting
 		public function settingsTo(lang:Language, cate:String, gameDiff:String, subcat:String, format:String):void
 		{
@@ -46,9 +45,9 @@
 			setSubcategory(subcat);
 			setCategory(cate);
 			setFormat(format);
-			
+
 			//Sets the chosenWordList, depending on difficulty
-			
+
 			setWordlist(lang.getCategoryByName(cate).getRandomWords(subcat));
 		}
 		public function setCategory(aCategory:String)
@@ -97,11 +96,11 @@
 		{
 			//Sets the word list based on the argument
 			currentWordlist = wordlist;
-			
+
 			//Finally, sets the total Rounds and game duration, based on the number of words in the list
 			totalRounds = currentWordlist.length;
 			score.duration = totalRounds * 2;
-			
+
 			//Resets the currentWord value to that of the first word in the given list
 			currentWord = currentWordlist[0];
 		}
@@ -117,34 +116,63 @@
 			round = -1;
 			score.resetScore();
 		}
-		
-		
+
+
 		//Processes
-		public function translateWord(fromLang:Language, toLang:Language, category:String, subcategory:String, word:String):String
+		public function translateWord(word:String, fromLang:Language, toLang:Language, category:String = null, subcategory:String = null):String
 		{
 			//Resets the word parameter to its lowercase version, allowing a degree of freedom with the input
 			word = word.toLowerCase();
 			
-			var fromList:Array = fromLang.getCategoryByName(category).getListByName(subcategory);
-			var toList:Array = toLang.getCategoryByName(category).getListByName(subcategory);
-			var translatedWord:String = "";
-
-			//Saves the index of the word's location
-			var index:uint = 0;
-
-			//Runs through all of the words in the fromList
-			for (var i:uint = 0; i < fromList.length; i++)
+			var translatedWord:String = "Word not found. Sorry!";
+			
+			if ((category != null) && (subcategory!=null))
 			{
-				//Goes through each word
-				if (fromList[i] == word)
+				var fromList:Array = fromLang.getCategoryByName(category).getListByName(subcategory);
+				var toList:Array = toLang.getCategoryByName(category).getListByName(subcategory);
+				
+				//Runs through all of the words in the fromList
+				for (var h:uint = 0; h < fromList.length; h++)
 				{
-					//When the word has been found in the fromList, its corresponding index is saved in the toList, giving the translated word.
-					translatedWord = toList[i];
+					//Goes through each word
+					if (fromList[h] == word)
+					{
+						//When the word has been found in the fromList, its corresponding index is saved in the toList, giving the translated word.
+						translatedWord = toList[h];
+					}
 				}
 			}
-			
+			else
+			{
+				//Saves the indexes of the three arrays in which the larget word is found.
+				var index1:int = -1;
+				var index2:int = -1;
+	
+				//Runs through all of the arrays looking for the matching category, difficulty and word.
+				for (var i:uint = 0; i < fromLang.allCategories.length; i++)
+				{
+					//Goes through every category
+					for (var j:uint = 0; j < fromLang.allCategories[i].everyWord.length; j++)
+					{
+						//And goes through each word
+						if (fromLang.allCategories[i].everyWord[j] == word)
+						{
+							//When the word has been found, its address is saved in the three previously defined variables
+							index1 = i;
+							index2 = j;
+						}
+					}
+				}
+				
+				if ((index1 != -1) && (index2 != -1))
+				{
+					translatedWord = toLang.allCategories[index1].everyWord[index2];
+				}
+			}
+
 			//Returns the corresponding word from the list of words in the TO language
-			if (translatedWord == ""){
+			if (translatedWord == "")
+			{
 				trace("We couldn't find a translation for " + word);
 			}
 			return (translatedWord);

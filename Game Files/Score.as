@@ -8,7 +8,7 @@
 		public var numCorrect:uint = 0;
 		public var numIncorrect:uint = 0;
 		public var playTime:Number = 0;
-		
+
 		public var duration:Number;
 		public var penaltyOnWrong:Boolean;
 		public var difficultyMultiplier:Number;
@@ -26,7 +26,6 @@
 
 		}
 
-
 		//Processes
 		public function calcScore():Number
 		{
@@ -37,12 +36,12 @@
 			{
 				performanceBonus -=  numIncorrect * 50;
 			}
-			
+
 			//Sets the time bonus, which is higher depending on how long it took the player to complete the round
 			if (playTime < duration)
 			{
 				timeBonus = (duration - playTime) * 50;
-				timeBonus *= (numCorrect / 10);
+				timeBonus *=  (numCorrect / 10);
 			}
 			else
 			{
@@ -53,12 +52,13 @@
 			totalScore = (baseCompletionScore + performanceBonus + timeBonus) * difficultyMultiplier;
 			return (totalScore);
 		}
+		
 		public function resetScore()
 		{
 			numCorrect = 0;
 			numIncorrect = 0;
 			playTime = 0;
 		}
-		
+
 	}
 }

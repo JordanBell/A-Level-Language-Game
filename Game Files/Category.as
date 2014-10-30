@@ -22,7 +22,7 @@
 		{
 			var blehblehbleh:Array = new Array();
 			//recieves a string name, and returns the corresponding list
-			return(blehblehbleh);
+			return (blehblehbleh);
 		}
 
 		public function getRandomWords(listName:String):Array

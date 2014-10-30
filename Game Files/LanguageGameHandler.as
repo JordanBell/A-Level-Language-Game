@@ -22,33 +22,43 @@
 		public var French:Language = new Language("French");
 		public var Italian:Language = new Language("Italian");
 		public var German:Language = new Language("German");
-		public var Portuguese:Language = new Language("Portuguese");
-		public var Turkish:Language = new Language("Turkish");
-		public var Finnish:Language = new Language("Finnish");
-		public var Dutch:Language = new Language("Dutch");
 		public var Japanese:Language = new Language("Japanese");
-
-		public var allLanguages:Array = new Array(English,Spanish,French,Italian,German,Turkish,Finnish,Portuguese,Dutch,Japanese);
+		public var Finnish:Language = new Language("Finnish");
+		public var Turkish:Language = new Language("Turkish");
+		public var Dutch:Language = new Language("Dutch");
+		public var Portuguese:Language = new Language("Portuguese");
+		
+		public var allLanguages:Array = new Array(English,Spanish,French,Italian,German,Japanese,Finnish,Turkish,Dutch,Portuguese);
 
 		public var wordSetArray:Array = new Array();
-
 
 		//Word Database
 		public function LanguageGameHandler()
 		{
 			
+			//TOTAL WORDS: 304 per language - 3,040 in total
 			
 			////////////////////////////////////////////////////////////////////ENGLISH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
 			
 			//Nouns
+			
+			//Easy: 24
+			//Medium: 22
+			//Hard: 18
+			//Total: 64
 			wordSetArray.push(	"easyList", "dog", "cat", "man", "woman", "girl", "boy", "car", "coffee", "beach", "house", "food", "drink", "me", "child", "bird", "book", "table", "chair", "phone", "shop", "bed", "day", "tea", "tourist", 
 								"mediumList", "animal", "person", "waiter", "sir", "money", "madam", "plane", "boat", "train", "bus", "river", "breakfast", "lunch", "dinner", "road", "dessert", "desert", "bathroom", "name", "waiter", "hotel", "english",
 								"hardList", "elevator", "apartment", "grocery store", "taxi", "air port", "train station", "restaurant", "building", "traffic", "spanish", "german", "italian", "french", "portuguese", "turkish", "finnish", "dutch", "japanese");
 			English.commonNouns.setWordsTo(wordSetArray);
 			
 			//Verbs
+			
+			//Easy: 12
+			//Medium: 11
+			//Hard: 9
+			//Total: 32
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "help", "go", "talk", "see", "get", "run", "walk", "hear", "read", "buy", "sell", "phone",
 								"mediumList", "text", "take", "drive", "wait", "speak", "swim", "learn", "sleep", "give", "sit", "stand",
@@ -56,6 +66,11 @@
 			English.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
+			
+			//Easy: 10
+			//Medium: 10
+			//Hard: 9
+			//Total: 29
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "good", "bad", "pretty", "ugly", "big", "small", "happy", "sad", "cold", "hot", 
 								"mediumList", "tired", "tall", "short", "smart", "dumb", "angry", "loud", "quiet", "fast", "slow", 
@@ -63,6 +78,11 @@
 			English.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
+			
+			//Easy: 11
+			//Medium: 9
+			//Hard: 12
+			//Total: 32
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
 								"mediumList", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "one hundred", 
@@ -70,6 +90,11 @@
 			English.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
+			
+			//Easy: 17
+			//Medium: 14
+			//Hard: 11
+			//Total: 42
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "house", "me", "buy", "go", "phone", "shop", "car", "drive", "walk", "run", "cycle", "train", "bus", "speak", "eat", "drink", "hotel",
 								"mediumList", "sir", "madam", "breakfast", "lunch", "dinner", "road", "travel", "borrow", "taxi", "money", "hello", "boat", "plane", "beach",
@@ -79,18 +104,30 @@
 			
 			
 			//Family
+			
+			//First: 6
+			//Second: 7
+			//Total: 13
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"firstList", "father", "mother", "brother", "sister", "son", "daughter",
 								"secondList", "uncle", "aunt", "grandfather", "grandmother", "cousin", "nephew", "niece");
 			English.family.setWordsTo(wordSetArray);
 			
 			//Phrases
+			
+			//First: 8
+			//Second: 7
+			//Total: 15
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"firstList", "hello", "good morning", "good afternoon", "good evening", "good night", "goodbye", "I don't understand", "my name is-", 
 								"secondList", "how much is-", "do you speak-", "where is-", "how much is-", "excuse me", "thank you", "you're welcome");
 			English.phrases.setWordsTo(wordSetArray);
 
 			//Activities
+			
+			//First: 10
+			//Second: 9
+			//Total: 19
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"firstList", "football", "tennis", "basketball", "hockey", "golf", "cricket", "baseball", "rugby", "badminton", "squash", 
 								"secondList", "shopping", "walking", "swimming", "reading", "horse riding", "music", "sunbathing", "relaxing", "sight seeing");
@@ -99,16 +136,23 @@
 			
 			
 			//Pronouns
+			
+			//Total: 9
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("I", "he", "she", "they", "us", "they", "you", "you (plural)", "it");
+			wordSetArray.push("I", "he", "she", "they", "us", "they", "you", "you", "it");
 			English.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
+			
+			//Total: 11
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("red", "orange", "yellow", "blue", "purple", "black", "white", "green", "pink", "grey", "brown");
 			English.colours.setWordsTo(wordSetArray);
 			
+			
 			//Countries
+			
+			//Total: 18
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("america", "canada", "england", "australia", "france", "spain", "mexico", "brazil", "germany", "russia", "sweden", "china", "japan", "india", "holland", "egypt", "italy", "turkey");
 			English.countries.setWordsTo(wordSetArray);
@@ -271,20 +315,20 @@
 			
 			
 			
-			/*///////////////////////////////////////////////////////////////////ITALIAN\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+			////////////////////////////////////////////////////////////////////ITALIAN\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
 			
 			//Nouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"EasyList", "cane", "gatto", "uomo", "donna", "ragazza", "ragazzo", "auto", "caffè", "spiaggia", "casa", "alimento", "bere "," me "," bambino "," bianco "," libro "," tavolo "," sedia "," telefono "," negozio "," letto "," giornata "," tazza "," turista ",
-								"mediumList", "animale", "persona", "cameriere", "signore", "denaro", "signora", "piano", "barca", "treno", "autobus", "fiume", "colazione "," pranzo "," cena "," strada "," dessert "," desertico "," bagno "," nome "," cameriere "," albergo "," inglese ",
-								"hardList", "ascensore", "appartamento", "negozio", "taxi", "aria porto", "stazione ferroviaria" "ristorante", "costruzione", "traffico", "spagnolo", "tedesco" , "italiano", "francese", "portuguese", "turco", "finlandese", "dutch", "giapponese");
+			wordSetArray.push(	"EasyList", "cane", "gatto", "uomo", "donna", "ragazza", "ragazzo", "auto", "caffè", "spiaggia", "casa", "alimento", "bere","me","bambino","bianco","libro","tavolo","sedia","telefono","negozio","letto","giornata","tazza","turista",
+								"mediumList", "animale", "persona", "cameriere", "signore", "denaro", "signora", "piano", "barca", "treno", "autobus", "fiume", "colazione","pranzo","cena","strada","dessert","desertico","bagno","nome","cameriere","albergo","inglese",
+								"hardList", "ascensore", "appartamento", "negozio", "taxi", "aria porto", "stazione ferroviaria", "ristorante", "costruzione", "traffico", "spagnolo", "tedesco" , "italiano", "francese", "portoghese", "turco", "finlandese", "olandese", "giapponese");
 			Italian.commonNouns.setWordsTo(wordSetArray);
 			
 			//Verbs
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"EasyList", "aiuto", "andare", "parlare", "vedere", "get", "correre", "camminare", "ascoltare", "leggere", "acquistare", "vendere", "telefono ",
+			wordSetArray.push(	"EasyList", "aiuto", "andare", "parlare", "vedere", "ottenere", "correre", "camminare", "ascoltare", "leggere", "acquistare", "vendere", "telefono",
 								"mediumList", "testo", "prendere", "guida", "aspettare", "parlare", "nuotare", "imparare", "sonno", "dare", "sedersi", "stare in piedi",
 								"hardList", "pronunciare", "scegliere", "conoscere", "costruire", "lavoro", "odore", "viaggio", "aspettare", "sentire");
 			Italian.commonVerbs.setWordsTo(wordSetArray);
@@ -293,20 +337,20 @@
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList", "buono", "cattivo", "ragazza", "brutto", "grande", "piccolo", "felice", "triste", "freddo", "caldo",
 								"mediumList", "stanco", "alto", "breve", "intelligente", "stupido", "arrabbiato", "forte", "tranquillo", "veloce", "lento",
-								"hardList", "brillante", "scuro", "chiaro", "confuso", "fastidioso", "rude", "gentile", "costoso", "economico");
+								"hardList", "brillante", "scuro", "chiaro", "confuso", "fastidioso", "scortese", "gentile", "costoso", "economico");
 			Italian.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList", "zero", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci",
-								"mediumList", "20", "30", "40", "50", "60", "70", "80", "90", "100",
-								"hardList", "200", "300", "400", "500", "600", "700", "800", "900", "1000", "10000 "," 100000 "," un milione ");
+								"mediumList", "venti", "trenta", "quaranta", "cinquanta", "sessanta", "settanta", "ottanta", "novanta", "cento",
+								"hardList", "duecento", "trecento", "quattrocento", "cinquecento", "seicento", "settecento", "ottocento", "novecento", "mille", "diecimila", "centomila", "milione");
 			Italian.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"EasyList", "casa", "me", "compro", "andare", "telefono", "negozio", "auto", "auto", "camminata", "correre", "ciclo", "treno "," autobus "," parlare "," mangiare "," bere "," hotel ",
-								"mediumList", "signore", "signora", "colazione", "pranzo", "cena", "strada", "viaggio", "prendere in prestito", "taxi", "denaro", "ciao", "barca "," piano "," spiaggia ",
+			wordSetArray.push(	"EasyList", "casa", "me", "compro", "andare", "telefono", "negozio", "auto", "guidare", "camminata", "correre", "ciclo", "treno","autobus","parlare","mangiare","bere","albergo",
+								"mediumList", "signore", "signora", "colazione", "pranzo", "cena", "strada", "viaggio", "prendere in prestito", "taxi", "denaro", "ciao", "barca","piano","spiaggia",
 								"hardList", "appartamento", "negozio", "aria porto", "stazione", "ristorante", "costruzione", "traffico", "direzione", "indirizzo", "caffè", "turista");
 			Italian.travel.setWordsTo(wordSetArray);
 			
@@ -314,8 +358,8 @@
 			
 			//Family
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"firstList", "padre", "madre", "fratello", "sorella", "son", "figlia",
-								"secondList", "zio", "zia", "nonno", "nonna", "cugino", "nipote", "nipote");
+			wordSetArray.push(	"firstList", "padre", "madre", "fratello", "sorella", "figlio", "figlia",
+								"secondList", "zio", "zia", "nonno", "nonna", "cugino", "nipote", "nipotina");
 			Italian.family.setWordsTo(wordSetArray);
 			
 			//Phrases
@@ -326,15 +370,15 @@
 
 			//Activities
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"firstList", "football", "tennis", "pallacanestro", "hockey", "golf", "grillo", "baseball", "rugby", "volano", "spremuta",
-								"secondList", "shopping", "camminare", "nuotare", "lettura", "cavallo", "musica", "prendere il sole", "rilassante", "giri turistici");
+			wordSetArray.push(	"firstList", "calcio", "tennis", "pallacanestro", "hockey", "golf", "grillo", "baseball", "rugby", "volano", "squash",
+								"secondList", "acquisti", "camminare", "nuotare", "lettura", "cavallo", "musica", "prendere il sole", "rilassante", "giri turistici");
 			Italian.activities.setWordsTo(wordSetArray);
 			
 			
 			
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("I", "lui", "lei", "loro", "noi", "loro", "tu", "voi", "it");
+			wordSetArray.push("io", "lui", "lei", "loro", "noi", "loro", "tu", "voi", "essa");
 			Italian.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
@@ -344,8 +388,8 @@
 			
 			//Countries
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("america", "Canada", "inghilterra", "australia", "francia", "spagna", "messico", "brasile", "germania", "russia", "svezia", "cina", "giappone "," india "," olanda "," egitto "," Italia "," tacchino ");
-			Italian.countries.setWordsTo(wordSetArray);*/
+			wordSetArray.push("america", "Canada", "inghilterra", "australia", "francia", "spagna", "messico", "brasile", "germania", "russia", "svezia", "cina", "giappone","india","olanda","egitto","italia","tacchino");
+			Italian.countries.setWordsTo(wordSetArray);
 			
 			
 			
@@ -427,13 +471,13 @@
 			
 			
 			
-			/*///////////////////////////////////////////////////////////////////JAPANESE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+			////////////////////////////////////////////////////////////////////JAPANESE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
 			
 			//Nouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"EasyList", "inu", "neko", "dansei", "josei", "on'nanoko", "otokonoko" , "-sha", " kōhī", "bīchi", "jūtaku", "shokuhin", "inryō ", "watashi", "kodomo", "tori" , "hon" , "tēburu" , "isu" , "denwa" , "shoppu", "beddo", "-bi" , "cha","kankō" , 
+			wordSetArray.push(	"EasyList", "inu", "neko", "dansei", "josei", "on'nanoko", "otokonoko" , "kuruma", "kōhī", "bīchi", "jūtaku", "shokuhin", "inryō", "watashi", "kodomo", "tori" , "hon" , "tēburu" , "isu" , "denwa" , "shoppu", "beddo", "hi" , "cha","kankō" , 
 							  	"MediumList" , "dōbutsu" , "hito" , "u~eitā" , "sā" , "okane" , "madamu", "hikōki" , "bōto" , "densha" , "basu" , "kawa", "chōshoku ","chūshoku","yūshoku","dōro","dezāto","sabaku","yokushitsu","namae","ueitā","hoteru" , "eigo" , 
 							  	"HardList", "erebētā", "manshon","shokuryōhin-ten","takushī","eāpōto","-eki","resutoran","tatemono","torafikku","supeingo","doitsugo","itaria-go","furansugo","porutogaru-go","nihongo" , "oranda", "finrando", "toruko");
 			Japanese.commonNouns.setWordsTo(wordSetArray);
@@ -442,70 +486,70 @@
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList", "uru" , "kau" , "geitaidenwa o yomu" , "kiku", "aruku", "jikkō", "shutoku", "miru" , "tōku", "iku" , "herupu",
 							  	"MediumList" , "tekisuto" , "tatsu", "suwaru", "ataeru", "manabu", "oyogu", "hanasu", "suimin", "matsu", "doraibu o toru", 
-							 	"HardList", " kōchiku" , " shitte iru" , " sentaku" , " shigoto", " kaori" , " ryokō", " taiki" o" hatsuon" , " kanjiru");
+							 	"HardList", "kōchiku" , "shitte iru" , "sentaku" , "shigoto", "kaori" , "ryokō", "taiki", "hatsuon", "kanjiru");
 			Japanese.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"EasyList" , " yoi" , " warui" , " atsui", " samui", " kanashī", " ureshī", " ko" , " dai" , " minikui" , " kirei" , 
-							  	"MediumList", " osoi" , " hayai" , " shizuka", " sōzōshī", " ikari" , " dumb" wa, " sumāto" , " shōto" , " senotakai", " tsukareta" 
-							  	"HardList" , " yasui" , " kōka", " reigi tadashī", " shitsurei", " urusai", " konran" , " kuria" , " kurai" , " akarui");
+			wordSetArray.push(	"EasyList" , "yoi" , "warui" , "atsui", "samui", "kanashī", "ureshī", "ko" , "dai" , "minikui" , "kirei" , 
+							  	"MediumList", "osoi" , "hayai" , "shizuka", "sōzōshī", "ikari" , "damu", "sumāto" , "shōto" , "senotakai", "tsukareta",
+							  	"HardList" , "yasui" , "kōka", "reigi tadashī", "shitsurei", "urusai", "konran" , "kuria" , "kurai" , "akarui");
 			Japanese.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-								"mediumList", 10, 20, 30, 40, 50, 60, 70, 80, 90,
-								"hardList", 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 10000, 100000, 1000000);
+			wordSetArray.push(	"easyList", "zero", "ichi", "ni", "yon", "shi", "go", "roku", "nana", "hachi", "kyu", "juu",
+								"mediumList", "nijuu", "sanjuu", "yonjuu", "gojuu", "rokujuu", "nanajuu", "hachijuu", "kyujuu", "hyaku", 
+								"hardList", "nihyaku", "sanbyaku", "yonhyaku", "gohyaku", "roppyaku", "nanhyaku", "happyaku", "kyuhyaku", "sen", "man", "mansen", "sensen");
 			Japanese.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	" EasyList" , "-ka" , " watashi" wa, " iku" , " denwa" , " shoppu" , "-sha", " doraibu", " sanpo", " jikkō", " saikuru", " ressha o" kau" " , " Basu" , " hanasu" , " taberu" , " nomu" , " hoteru" , 
-							  	" MediumList", " sensei", " madamu", " chōshoku" , " chūshoku", " yūshoku", " dōro" , " ryokō" , " kariru", " takushī" , " okane" , " kon'nichiwa" , " bōto "," Hikōki"," bīchi" , 
-								" HardList", " manshon", " shokuryōhin-ten", " eāpōto", "-eki", " resutoran", " tatemono", " torafikku", " hōkō", " adoresu", " kōhī", " kankōkyaku");
+			wordSetArray.push(	"EasyList" , "ie" , "watashi", "kau", "iku" , "denwa" , "shoppu" , "kuruma", "doraibu", "sanpo", "jikkō", "saikuru", "ressha" , "basu" , "hanasu" , "taberu" , "nomu" , "hoteru" , 
+							  	"MediumList", "sensei", "madamu", "chōshoku" , "chūshoku", "yūshoku", "dōro","ryokō","kariru","takushī","okane","kon'nichiwa","bōto","hikōki","bīchi" , 
+								"HardList", "manshon", "shokuryōhin-ten", "eāpōto", "tetsudō no eki", "resutoran", "tatemono","torafikku","hōkō","adoresu","kōhī","kankōkyaku");
 			Japanese.travel.setWordsTo(wordSetArray);
 			
 			
 			
 			//Family
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	" FirstList" , " chichi" , " haha" , " otōto", " imōto" , " musuko" , " musume" , 
-							  	" SecondList", " oji" " oba", " sofu" " sobo", " itoko", " oi" " mei");
+			wordSetArray.push(	"FirstList" , "chichi","haha","otōto","imōto","musuko","musume", 
+							  	"SecondList", "oji","oba","sofu","sobo","itoko","oi","mei");
 			Japanese.family.setWordsTo(wordSetArray);
 			
 			//Phrases
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	" FirstList", " kon'nichiwa", " ohayō", " kon'nichiwa", " konbanwa", " oyasumi" wa, " sayonara" , " watashinonamaeha - ", " watashi wa rikai shite inai" , 
-							  	" SecondList", " - wa dono kurai", " hanasu - anata wa nan" " doko ni aru - ", " ikuradesu ka - ", " dōitashimashite", " arigatō" , " sumimasen");
+			wordSetArray.push(	"FirstList", "kon'nichiwa", "ohayō", "kon'nichiwa", "konbanwa", "oyasumi", "sayonara" , "watashi wa rikai shite inai", "Watashinonamaeha-" , 
+							  	"SecondList", "-wa dono kurai", "hanasu - anata wa nan", "doko ni aru-", "ikuradesu ka-", "dōitashimashite", "arigatō" , "sumimasen");
 			Japanese.phrases.setWordsTo(wordSetArray);
 
 			//Activities
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	" FirstList", " sakkā", " tenisu", " basukettobōru", " hokkē", " gorufu", " kuriketto", " yakyū", " ragubī", " badominton", " sukasshu" , 
-							  	" SecondList", " kaimono", " u~ōkingu", " suiei", " dokusho", " shiryoku ga mite", " rirakkusu", " nikkōyoku", " ongaku" " jōba");
+			wordSetArray.push(	"FirstList", "sakkā", "tenisu", "basukettobōru", "hokkē", "gorufu", "kuriketto", "yakyū", "ragubī", "badominton", "sukasshu" , 
+							  	"SecondList", "kaimono", "u~ōkingu", "suiei", "dokusho", "shiryoku ga mite", "rirakkusu", "nikkōyoku", "ongaku", "jōba");
 			Japanese.activities.setWordsTo(wordSetArray);
 			
 			
 			
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(" Watashi" , " kare" , " kanojo", " karera", " watashitachi" wa, " karera", " anata" , " anatatachi" , " sore");
+			wordSetArray.push("watashi","kare","kanojo","karera","watashitachi","karera","anata","anatatachi","sore");
 			Japanese.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(" Aka" , " orenji" , " ki" , " buraun" , " gurē" , " pinku" , " midori" , " shiro" , " kuro" , " murasaki" , " ao");
+			wordSetArray.push("aka","orenji","ki","buraun","gurē","pinku","midori","shiro","kuro","murasaki","ao");
 			Japanese.colours.setWordsTo(wordSetArray);
 			
 			//Countries
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(" Amerika", " Kanada", " Igirisu", " ōsutoraria", " Furansu", " Supein", " Mekishiko", " Burajiru", " Doitsu", " Roshia", " suu~ēden", " Chūgoku", " Nihon "," Indo"," Oranda"," Ejiputo"," Itaria"," shichimenchō");
+			wordSetArray.push("amerika","kanada","igirisu","ōsutoraria","furansu","supein","mekishiko","burajiru","doitsu","roshia","suu~ēden","chūgoku","nihon","indo","oranda","ejiputo","itaria","shichimenchō");
 			Japanese.countries.setWordsTo(wordSetArray);
 			
 			
 			
-			////////////////////////////////////////////////////////////////////FINNISH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+			/*///////////////////////////////////////////////////////////////////FINNISH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
 			
@@ -644,7 +688,7 @@
 			
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("Ben", "o", "o", "onlar", "bize", "onlar", "sen", "siz", "o");
+			wordSetArray.push("ben", "o", "o", "onlar", "bize", "onlar", "sen", "siz", "o");
 			Turkish.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
@@ -656,8 +700,6 @@
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("Amerika", "kanada", "İngiltere", "avustralya", "fransa", "İspanya", "meksika", "brezilya", "almanya", "rusya", "isveç", "Çin", "japonya","hindistan","hollanda","Mısır","İtalya","türkiye");
 			Turkish.countries.setWordsTo(wordSetArray);
-			
-			
 			
 			/*///////////////////////////////////////////////////////////////////DUTCH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
@@ -814,12 +856,87 @@
 			Portuguese.countries.setWordsTo(wordSetArray);*/
 		}
 
-
 		//Processes
+		public function MEGAWORDTRACEGO():void
+		{
+			for (var i:uint = 0; i < allLanguages.length; i++)
+			{
+				for (var j:uint = 0; j < allLanguages[i].allCategories.length; j++)
+				{
+					for (var k:uint = 1; k <= allLanguages[i].allCategories[j].num; k++)
+					{
+						if (allLanguages[i].allCategories[j].num == 1)
+						{
+							trace("Language: " + allLanguages[i].name + ", Category: " + allLanguages[i].allCategories[j].name + ", Word List: MAIN, is:     " + allLanguages[i].allCategories[j].wordList);
+						}
+						else if (allLanguages[i].allCategories[j].num == 2)
+						{
+							if (k == 1)
+							{
+								trace("Language: " + allLanguages[i].name + ", Category: " + allLanguages[i].allCategories[j].name + ", Word List: FIRST, is:     " + allLanguages[i].allCategories[j].firstList);
+							}
+							else if (k == 2)
+							{
+								trace("Language: " + allLanguages[i].name + ", Category: " + allLanguages[i].allCategories[j].name + ", Word List: SECOND, is:     " + allLanguages[i].allCategories[j].secondList);
+							}
+						}
+						else if (allLanguages[i].allCategories[j].num == 3)
+						{
+							if (k == 1)
+							{
+								trace("Language: " + allLanguages[i].name + ", Category: " + allLanguages[i].allCategories[j].name + ", Word List: EASY, is:     " + allLanguages[i].allCategories[j].easyList);
+							}
+							else if (k == 2)
+							{
+								trace("Language: " + allLanguages[i].name + ", Category: " + allLanguages[i].allCategories[j].name + ", Word List: MEDIUM, is:     " + allLanguages[i].allCategories[j].mediumList);
+							}
+							else if (k == 3)
+							{
+								trace("Language: " + allLanguages[i].name + ", Category: " + allLanguages[i].allCategories[j].name + ", Word List: HARD, is:     " + allLanguages[i].allCategories[j].hardList);
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		public function englishWordReturn():Array
+		{
+			var returnList:Array = new Array();
+			
+			for (var j:uint = 0; j < English.allCategories.length; j++)
+			{
+				for (var k:uint = 1; k <= English.allCategories[j].num; k++)
+				{
+					for (var l:uint = 0; l < English.allCategories[j].everyWord.length; l++)
+					{
+						returnList.push(English.allCategories[j].everyWord[l]);						
+					}
+				}
+			}
+			
+			return(returnList);
+		}
+		
 		public function setLanguage(inLang:Language, outLang:Language):void
 		{
 			inputLanguage = inLang;
 			outputLanguage = outLang;
+		}
+		
+		public function getLangByName(aName):Language
+		{
+			var returnLang:Language = null;
+			
+			for (var i:uint = 0; i < allLanguages.length; i++)
+			{
+				if (allLanguages[i].name.toLowerCase() == aName.toLowerCase())
+				{
+					returnLang = allLanguages[i];
+				}
+			}
+			
+			return(returnLang);
 		}
 		
 		public function submitAnswer(gameType:Game, inputText:String):Boolean
@@ -831,7 +948,7 @@
 				//Each gametype has its own way of submitting answers. I reckon this is a good alternative to using Polymorphism, which frankly I haven't figured out yet.
 				case "FlashCards" :
 					//The expected answer is the translation of the current word
-					expectedAnswer = currentGame.translateWord(outputLanguage,inputLanguage,currentGame.chosenCategory, currentGame.chosenSubcategory, currentGame.currentWord);
+					expectedAnswer = currentGame.translateWord(currentGame.currentWord, outputLanguage, inputLanguage, currentGame.chosenCategory, currentGame.chosenSubcategory);
 					if (inputText == expectedAnswer)
 					{
 						//If it's correct, increase the count of correct answers

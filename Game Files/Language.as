@@ -12,16 +12,16 @@
 		public var commonAdjectives:CategoryLarge = new CategoryLarge("commonAdjectives");
 		public var numbers:CategoryLarge = new CategoryLarge("numbers");
 		public var travel:CategoryLarge = new CategoryLarge("travel");
-		
+
 		public var family:CategoryMedium = new CategoryMedium("family");
 		public var phrases:CategoryMedium = new CategoryMedium("phrases");
 		public var activities:CategoryMedium = new CategoryMedium("activities");
-		
+
 		public var pronouns:CategorySmall = new CategorySmall("pronouns");
 		public var colours:CategorySmall = new CategorySmall("colours");
 		public var countries:CategorySmall = new CategorySmall("countries");
 
-		public var allCategories:Array = new Array(commonVerbs,commonNouns,commonAdjectives,numbers,pronouns,colours,family,travel,phrases,activities,countries);
+		public var allCategories:Array = new Array(commonNouns,commonVerbs,commonAdjectives,numbers,travel,family,phrases,activities,pronouns,colours,countries);
 
 
 		public function Language(langName:String)

@@ -30,28 +30,23 @@
 		//Processes
 		public function calcScore():Number
 		{
-			//Sets the time bonus, which is higher depending on how long it took the player to complete the round
-			if (playTime < duration)
-			{
-				timeBonus = (duration - playTime) * 50;
-			}
-			else
-			{
-				timeBonus = 0;
-			}
-
-			//Error checker for the time bonus value - Should not be negative
-			if (timeBonus < 0)
-			{
-				trace("ERROR: Time bonus is negative, which is hardly a 'bonus'.");
-			}
-
 			//Sets the performance bonus, which is higher based on the number of correct answers
 			performanceBonus = numCorrect * 100;
 
 			if (penaltyOnWrong)
 			{
 				performanceBonus -=  numIncorrect * 50;
+			}
+			
+			//Sets the time bonus, which is higher depending on how long it took the player to complete the round
+			if (playTime < duration)
+			{
+				timeBonus = (duration - playTime) * 50;
+				timeBonus *= (numCorrect / 10);
+			}
+			else
+			{
+				timeBonus = 0;
 			}
 
 			//The totalScore holds the value of all of these values put together

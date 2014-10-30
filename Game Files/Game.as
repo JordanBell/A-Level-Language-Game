@@ -45,7 +45,7 @@
 			setCategory(cate);
 
 			//And hence sets the current list of words
-			setWordlist(lang.getCategoryByName(cate).getRandomWords(totalRounds, diff));
+			setWordlist(lang.getCategoryByName(cate).getRandomWords(diff));
 		}
 		public function setCategory(aCategory:String)
 		{
@@ -64,14 +64,14 @@
 					totalRounds = 10;
 					useTimer = false;
 					score.penaltyOnWrong = false;
-					score.difficultyMultiplier = 1.0;
-					score.duration = totalRounds * 5;
+					score.difficultyMultiplier = 1;
+					score.duration = totalRounds * 2.5;
 					break;
 				case "medium" :
 					totalRounds = 10;
 					useTimer = true;
 					score.penaltyOnWrong = false;
-					score.difficultyMultiplier = 1.2;
+					score.difficultyMultiplier = 2;
 					score.duration = totalRounds * 2.5;
 					break;
 				case "hard" :
@@ -79,7 +79,7 @@
 					totalRounds = 10;
 					useTimer = true;
 					score.penaltyOnWrong = true;
-					score.difficultyMultiplier = 1.5;
+					score.difficultyMultiplier = 3;
 					score.duration = totalRounds * 1.5;
 					break;
 				default :

@@ -21,7 +21,6 @@
 
 		//Gameplay
 		public var useTimer:Boolean;
-		public var duration:uint;
 		public var round:int = -1;
 		public var totalRounds:uint;
 
@@ -29,6 +28,17 @@
 		public var score:Score = new Score();
 		
 
+		//Constructor
+		public function Game(gameType:String):void
+		{
+			//Sets the properties which are based on the type of game.
+			name = gameType;
+			gameFrameName = "Game_" + gameType;
+			settingsFrameName = "Settings_" + gameType;
+		}
+		
+		
+		//Property editting
 		public function settingsTo(lang:Language, cate:String, diff:String):void
 		{
 			setDifficulty(diff);
@@ -37,20 +47,10 @@
 			//And hence sets the current list of words
 			setWordlist(lang.getCategoryByName(cate).getRandomWords(totalRounds, diff));
 		}
-
-		public function Game(gameType:String):void
-		{
-			//Sets the properties which are based on the type of game.
-			name = gameType;
-			gameFrameName = "Game_" + gameType;
-			settingsFrameName = "Settings_" + gameType;
-		}
-
 		public function setCategory(aCategory:String)
 		{
 			chosenCategory = aCategory;
 		}
-
 		public function setDifficulty(diff:String):void
 		{
 			//Literally, sets the difficulty.
@@ -64,29 +64,29 @@
 					totalRounds = 10;
 					useTimer = false;
 					score.penaltyOnWrong = false;
-					score.difficultyMultiplier = 0.8;
+					score.difficultyMultiplier = 1.0;
+					score.duration = totalRounds * 5;
 					break;
 				case "medium" :
 					totalRounds = 10;
 					useTimer = true;
 					score.penaltyOnWrong = false;
-					score.difficultyMultiplier = 1.0;
-					duration = 150;
+					score.difficultyMultiplier = 1.2;
+					score.duration = totalRounds * 2.5;
 					break;
 				case "hard" :
 					//Only hard difficulty adds a penalty for incorrect answers
 					totalRounds = 10;
 					useTimer = true;
 					score.penaltyOnWrong = true;
-					score.difficultyMultiplier = 1.2;
-					duration = 200;
+					score.difficultyMultiplier = 1.5;
+					score.duration = totalRounds * 1.5;
 					break;
 				default :
 					trace("Error: The difficulty was not recognised in the setDifficulty method, under the Game class.");
 					chosenDifficulty = "ERROR_DifficultyName";
 			}
 		}
-
 		public function setWordlist(wordlist:Array):void
 		{
 			//Sets the word list based on the argument
@@ -95,7 +95,6 @@
 			//Resets the currentWord value to that of the first word in the given list
 			currentWord = currentWordlist[0];
 		}
-
 		public function nextRound():void
 		{
 			//The condition checks to see if the language, category and difficulty has been set before starting the game.
@@ -112,7 +111,14 @@
 				trace("ERROR: Required settings, (Language, Category and Difficulty) have not all been set!");
 			}
 		}
-
+		public function resetGameStats():void
+		{
+			round = -1;
+			score.resetScore();
+		}
+		
+		
+		//Processes
 		public function translateWord(fromLang:Language, toLang:Language, word:String):String
 		{
 			//Resets the word parameter to its lowercase version, allowing a degree of freedom with the input
@@ -143,9 +149,16 @@
 					}
 				}
 			}
+			
+			var translatedWord:String = toLang.allCategories[index1].allDifficulties[index2][index3];
 
 			//Returns the corresponding word from the list of words in the TO language
-			return (toLang.allCategories[index1].allDifficulties[index2][index3]);
+			if (translatedWord == null){
+				trace("We couldn't find a translation for " + word);
+			}
+			return (translatedWord);
 		}
+		
+		
 	}
 }

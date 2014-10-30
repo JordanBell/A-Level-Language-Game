@@ -1,5 +1,6 @@
 ﻿package 
 {
+	import flash.net.SharedObject;
 
 	public class LanguageGameHandler
 	{
@@ -32,10 +33,9 @@
 		public var wordSetArray:Array = new Array();
 
 
+		//Word Database
 		public function LanguageGameHandler()
 		{
-			////////////////////////////////////////////////////Language word database\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
 			//English nouns
 			wordSetArray.push(	"Easy Words:", "dog", "cat", "man", "woman", "girl", "boy", "car", "house", "food", "me", 
 								"Medium Words:", "animal", "person", "sir", "madam", "river", "breakfast", "lunch", "dinner", "road", "street", 
@@ -50,13 +50,13 @@
 			Spanish.commonNouns.setWordsTo(wordSetArray);
 		}
 
-		//Used to set the output language, and the input language.
+
+		//Processes
 		public function setLanguage(inLang:Language, outLang:Language):void
 		{
 			inputLanguage = inLang;
 			outputLanguage = outLang;
 		}
-
 		public function submitAnswer(gameType:Game, inputText:String):Boolean
 		{
 			inputText = inputText.toLowerCase();
@@ -77,8 +77,6 @@
 						//Otherwise, increase the count of incorrect answers
 						currentGame.score.numIncorrect++;
 					}
-					//And finally, go to the next round.
-					currentGame.nextRound();
 					return (inputText == expectedAnswer);
 					break;
 				case "Choices" :

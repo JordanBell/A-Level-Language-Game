@@ -5,30 +5,35 @@
 	public class Score
 	{
 		//Common score-based properties
-		public var numCorrect:uint;
-		public var numIncorrect:uint;
-		public var playTime:Number;
-		public var timeBonusLimit:Number;
+		public var numCorrect:uint = 0;
+		public var numIncorrect:uint = 0;
+		public var playTime:Number = 0;
+		
+		public var duration:Number;
 		public var penaltyOnWrong:Boolean;
 		public var difficultyMultiplier:Number;
 
 		//Score value components
-		public var baseCompletionScore:Number;
-		public var timeBonus:Number;
-		public var performanceBonus:Number;
-		public var totalScore:Number;
+		public const baseCompletionScore:Number = 100;
+		public var timeBonus:Number = 0;
+		public var performanceBonus:Number = 0;
+		public var totalScore:Number = 0;
 
+
+		//Constructor
 		public function Score()
 		{
 
 		}
 
-		public function calcScore():void
+
+		//Processes
+		public function calcScore():Number
 		{
 			//Sets the time bonus, which is higher depending on how long it took the player to complete the round
-			if (playTime < timeBonusLimit)
+			if (playTime < duration)
 			{
-				timeBonus = (timeBonusLimit - playTime) * 50;
+				timeBonus = (duration - playTime) * 50;
 			}
 			else
 			{
@@ -42,7 +47,7 @@
 			}
 
 			//Sets the performance bonus, which is higher based on the number of correct answers
-			performanceBonus +=  numCorrect * 100;
+			performanceBonus = numCorrect * 100;
 
 			if (penaltyOnWrong)
 			{
@@ -51,6 +56,14 @@
 
 			//The totalScore holds the value of all of these values put together
 			totalScore = (baseCompletionScore + performanceBonus + timeBonus) * difficultyMultiplier;
+			return (totalScore);
 		}
+		public function resetScore()
+		{
+			numCorrect = 0;
+			numIncorrect = 0;
+			playTime = 0;
+		}
+		
 	}
 }

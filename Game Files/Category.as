@@ -14,32 +14,18 @@
 		public var allDifficulties:Array = new Array(easyList,mediumList,hardList);
 
 
+		//Constructor
 		public function Category(categoryName:String)
 		{
 			name = categoryName;
 		}
 
-		public function getDifficultyListByName(aName:String):Array
-		{
-			//Returns a word list based on its string value
-			switch (aName)
-			{
-				case "easyList" :
-					return (easyList);
-					break;
-				case "mediumList" :
-					return (mediumList);
-					break;
-				case "hardList" :
-					return (hardList);
-					break;
-				default :
-					return (easyList);
-			}
-		}
 
+		//Set and Get Methods
 		public function setWordsTo(allWords:Array)
 		{
+			//Receives an array, and sets it to the difficulty word arrays
+			
 			easyList.splice(0, easyList.length);
 			mediumList.splice(0, mediumList.length);
 			hardList.splice(0, hardList.length);
@@ -78,27 +64,6 @@
 				}
 			}
 		}
-
-		public function getWordsPerDifficulty(diff:String):Array
-		{
-			diff = diff.toLowerCase();
-			switch (diff)
-			{
-				case "easy" :
-					return (easyList);
-					break;
-				case "medium" :
-					return (mediumList);
-					break;
-				case "hard" :
-					return (hardList);
-					break;
-				default :
-					trace("ERROR: The difficulty was not recognised in the getWordsPerDifficulty method, under the Category class.");
-					return (easyList);
-			}
-		}
-
 		public function getRandomWords(quantity:uint, difficulty:String):Array
 		{
 			difficulty = difficulty.toLowerCase();
@@ -111,8 +76,9 @@
 
 			//Sets the value of the argument difficulty list to the searchList array
 			searchList = getWordsPerDifficulty(difficulty);
-			
-			for (var i:uint = 0; i < searchList.length; i++){
+
+			for (var i:uint = 0; i < searchList.length; i++)
+			{
 				copyList.push(searchList[i]);
 			}
 
@@ -130,8 +96,45 @@
 			}
 
 			//Now the outputList is fully compiled, and can be returned
-			
+
 			return (outputList);
+		}
+		public function getWordsPerDifficulty(difficulty:String):Array
+		{
+			difficulty = difficulty.toLowerCase();
+			switch (difficulty)
+			{
+				case "easy" :
+					return (easyList);
+					break;
+				case "medium" :
+					return (mediumList);
+					break;
+				case "hard" :
+					return (hardList);
+					break;
+				default :
+					trace("ERROR: The difficulty was not recognised in the getWordsPerDifficulty method, under the Category class.");
+					return (easyList);
+			}
+		}
+		public function getDifficultyListByName(aName:String):Array
+		{
+			//Returns a word list based on its string value
+			switch (aName)
+			{
+				case "easyList" :
+					return (easyList);
+					break;
+				case "mediumList" :
+					return (mediumList);
+					break;
+				case "hardList" :
+					return (hardList);
+					break;
+				default :
+					return (easyList);
+			}
 		}
 	}
 }

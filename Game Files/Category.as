@@ -4,6 +4,7 @@
 	public class Category
 	{
 		public var name:String;
+		public var everyWord:Array = new Array();
 
 		//Constructor
 		public function Category(categoryName:String)
@@ -32,7 +33,7 @@
 			var outputList:Array = new Array();
 			//The copyList variable acts as an editable copy of the array of a given listName
 			var copyList:Array = new Array();
-			//The searchList holds the list from while random words are being retrieved
+			//The searchList holds the list from which random words are being retrieved
 			var searchList:Array = new Array();
 			var cell:Number = 0;
 

@@ -23,6 +23,7 @@
 		//Gameplay
 		public var useTimer:Boolean;
 		public var round:int = -1;
+		public var totalRounds:uint;
 
 		//Score
 		public var score:Score = new Score();
@@ -39,18 +40,24 @@
 		
 		
 		//Property editting
-		public function settingsTo(lang:Language, cate:String, gameDiff:String, subcat:String):void
+		public function settingsTo(lang:Language, cate:String, gameDiff:String, subcat:String, format:String):void
 		{
 			setGameDifficulty(gameDiff);
-			setSubcategory(Subcat);
+			setSubcategory(subcat);
 			setCategory(cate);
+			setFormat(format);
 			
 			//Sets the chosenWordList, depending on difficulty
+			
 			setWordlist(lang.getCategoryByName(cate).getRandomWords(subcat));
 		}
 		public function setCategory(aCategory:String)
 		{
 			chosenCategory = aCategory;
+		}
+		public function setFormat(aFormat:String):void
+		{
+			chosenFormat = aFormat;
 		}
 		public function setGameDifficulty(diff:String):void
 		{
@@ -65,35 +72,36 @@
 					useTimer = false;
 					score.penaltyOnWrong = false;
 					score.difficultyMultiplier = 1;
-					score.duration = totalRounds * 2.5;
 					break;
 				case "medium" :
 					useTimer = true;
 					score.penaltyOnWrong = false;
 					score.difficultyMultiplier = 2;
-					score.duration = totalRounds * 2.5;
 					break;
 				case "hard" :
 					//Only hard difficulty adds a penalty for incorrect answers
 					useTimer = true;
 					score.penaltyOnWrong = true;
 					score.difficultyMultiplier = 3;
-					score.duration = totalRounds * 1.5;
 					break;
 				default :
 					trace("Error: The difficulty was not recognised in the setGameDifficulty method, under the Game class.");
 			}
 		}
-		public function setSubcategory(diff:String):void
+		public function setSubcategory(subcat:String):void
 		{
-			//Literally, sets the difficulty.
-			chosenSubcategory = diff.toLowerCase();
+			//Literally, sets the subcategory.
+			chosenSubcategory = subcat.toLowerCase();
 		}
 		public function setWordlist(wordlist:Array):void
 		{
 			//Sets the word list based on the argument
 			currentWordlist = wordlist;
-
+			
+			//Finally, sets the total Rounds and game duration, based on the number of words in the list
+			totalRounds = currentWordlist.length;
+			score.duration = totalRounds * 2;
+			
 			//Resets the currentWord value to that of the first word in the given list
 			currentWord = currentWordlist[0];
 		}
@@ -112,46 +120,34 @@
 		
 		
 		//Processes
-		public function translateWord(fromLang:Language, toLang:Language, category:Category, word:String):String
+		public function translateWord(fromLang:Language, toLang:Language, category:String, subcategory:String, word:String):String
 		{
 			//Resets the word parameter to its lowercase version, allowing a degree of freedom with the input
 			word = word.toLowerCase();
+			
+			var fromList:Array = fromLang.getCategoryByName(category).getListByName(subcategory);
+			var toList:Array = toLang.getCategoryByName(category).getListByName(subcategory);
+			var translatedWord:String = "";
 
-			//Saves the indexes of the three arrays in which the larget word is found.
-			var index1:uint = 0;
-			var index2:uint = 0;
-			var index3:uint = 0;
+			//Saves the index of the word's location
+			var index:uint = 0;
 
-			//Runs through all of the arrays looking for the matching category, difficulty and word.
-			for (var i:uint = 0; i < fromLang.allCategories.length; i++)
+			//Runs through all of the words in the fromList
+			for (var i:uint = 0; i < fromList.length; i++)
 			{
-				//Goes through every category
-				for (var j:uint = 0; j < fromLang.allCategories[i].allDifficulties.length; j++)
+				//Goes through each word
+				if (fromList[i] == word)
 				{
-					//And goes through each difficulty
-					for (var k:uint = 0; k < fromLang.allCategories[i].allDifficulties[j].length; k++)
-					{
-						//And goes through each word
-						if (fromLang.allCategories[i].allDifficulties[j][k] == word)
-						{
-							//When the word has been found, its address is saved in the three previously defined variables
-							index1 = i;
-							index2 = j;
-							index3 = k;
-						}
-					}
+					//When the word has been found in the fromList, its corresponding index is saved in the toList, giving the translated word.
+					translatedWord = toList[i];
 				}
 			}
 			
-			var translatedWord:String = toLang.allCategories[index1].allDifficulties[index2][index3];
-
 			//Returns the corresponding word from the list of words in the TO language
-			if (translatedWord == null){
+			if (translatedWord == ""){
 				trace("We couldn't find a translation for " + word);
 			}
 			return (translatedWord);
 		}
-		
-		
 	}
 }

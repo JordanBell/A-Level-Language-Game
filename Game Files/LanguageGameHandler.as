@@ -44,7 +44,7 @@
 			
 			//Nouns
 			wordSetArray.push(	"easyList", "dog", "cat", "man", "woman", "girl", "boy", "car", "coffee", "beach", "house", "food", "drink", "me", "child", "bird", "book", "table", "chair", "phone", "shop", "bed", "day", "tea", "tourist", 
-								"mediumList", "animal", "person", "waiter", "sir", "money", "madam", "plane", "boat", "train", "bus", "river", "breakfast", "lunch", "dinner", "road", "dessert", "desert", "bathroom", "name", "waiter", "hotel", "English",
+								"mediumList", "animal", "person", "waiter", "sir", "money", "madam", "plane", "boat", "train", "bus", "river", "breakfast", "lunch", "dinner", "road", "dessert", "desert", "bathroom", "name", "waiter", "hotel", "english",
 								"hardList", "elevator", "apartment", "grocery store", "taxi", "air port", "train station", "restaurant", "building", "traffic", "spanish", "german", "italian", "french", "portuguese", "turkish", "finnish", "dutch", "japanese");
 			English.commonNouns.setWordsTo(wordSetArray);
 			
@@ -112,7 +112,7 @@
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("america", "canada", "england", "australia", "france", "spain", "mexico", "brazil", "germany", "russia", "sweden", "china", "japan", "india", "holland", "egypt", "italy", "turkey");
 			English.countries.setWordsTo(wordSetArray);
-
+			
 
 
 			////////////////////////////////////////////////////////////////////SPANISH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -120,9 +120,10 @@
 			
 			
 			//Nouns
-			wordSetArray.push(	"easyList", "perro", "gato", "hombre", "mujer", "hermoso", "joven", "coche", "café", "playa", "casa", "comida", "drink", "me", "niño", "ave", "libro", "mesa", "silla", "teléfono", "tienda", "cama", "día", "tazas", "turista",
-								"mediumList", "animal", "persona", "camarero", "señor", "dinero", "señora", "plan", "barco", "tren", "autobús", "rio", "desayuno", "almuerzo", "cena", "carretera", "postre", "desierto","cuarto de baño","nombre","camarero","hotel","Inglés",
-								"hardList", "ascensor", "apartamento", "supermercado", "Taxi", "puerto de aire", "Estación de tren", "restaurant", "edificio", "tráfico", "españoles", "alemán" , "italian", "francés", "portugués", "turco", "finlandia", "dutch", "japanese");
+			wordSetArray.splice(0, wordSetArray.length);
+			wordSetArray.push(	"easyList", "perro", "gato", "hombre", "mujer", "hermoso", "joven", "coche", "café", "playa", "casa", "comida", "bebida", "me", "niño", "ave", "libro", "mesa", "silla", "teléfono", "tienda", "cama", "día", "tazas", "turista",
+								"mediumList", "animal", "persona", "camarero", "señor", "dinero", "señora", "plan", "barco", "tren", "autobús", "rio", "desayuno", "almuerzo", "cena", "carretera", "postre", "desierto","cuarto de baño","nombre","camarero","hotel","inglés",
+								"hardList", "ascensor", "apartamento", "supermercado", "taxi", "puerto de aire", "estación de tren", "restaurant", "edificio", "tráfico", "españoles", "alemán" , "italian", "francés", "portugués", "turco", "finlandia", "dutch", "japanese");
 			Spanish.commonNouns.setWordsTo(wordSetArray);
 			
 			//Verbs
@@ -134,9 +135,9 @@
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", "bueno", "malo", "bonito", "feo", "grande", "pequeño", "feliz", "triste", "cold", "hot",
+			wordSetArray.push(	"easyList", "bueno", "malo", "bonito", "feo", "grande", "pequeño", "feliz", "triste", "frío", "caliente",
 								"mediumList", "cansado", "alto", "corto", "elegante", "tonto", "enojado", "fuerte", "tranquilo", "rápido", "lento",
-								"hardList", "brillante", "oscuridad", "clear", "confuso", "molesto", "grosero", "educado", "caro", "barato");
+								"hardList", "brillante", "oscuridad", "claro", "confuso", "molesto", "grosero", "educado", "caro", "barato");
 			Spanish.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
@@ -177,7 +178,7 @@
 			
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("yo", "él", "ella", "ellos", "nos", "ellos", "usted", "ustedes", "ella");
+			wordSetArray.push("yo", "él", "ella", "ellos", "nos", "ellos", "usted", "ustedes", "lo");
 			Spanish.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
@@ -192,43 +193,42 @@
 			
 			
 			
-			/*////////////////////////////////////////////////////////////////////FRENCH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+			////////////////////////////////////////////////////////////////////FRENCH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
 			
 			//Nouns
-			wordSetArray.push(	"easyList", "chien", "chat", "homme", "femme", "fille", "enfant", "voiture", "chaud", "plage", "maison", "cuisine", "boisson "," moi "," enfant "," oiseau "," livre "," table "," chaise "," portable "," magasin "," lit "," jour "," vert "," touriste ",
-								"mediumList", "animal", "personne", "serveur", "monsieur", "argent", "madame", "avion", "bateau", "train", "bus", "fleuve", "petit-déjeuner "," repas "," cuisine "," route "," dessert "," désert "," salle de bain "," nom "," serveur "," hôtel "," anglais ",
+			wordSetArray.splice(0, wordSetArray.length);
+			wordSetArray.push(	"easyList", "chien", "chat", "homme", "femme", "fille", "enfant", "voiture", "chaud", "plage", "maison", "cuisine", "boisson ","moi","enfant","oiseau","livre","table","chaise","téléphone","magasin","lit","jour","vert","touriste",
+								"mediumList", "animal", "personne", "serveur", "monsieur", "argent", "madame", "avion", "bateau", "train", "bus", "fleuve", "petit-déjeuner","repas","souper","route","dessert","désert","sallede bain","nom","serveur","hôtel","anglais",
 								"hardList", "ascenseur", "appartement", "épicerie", "taxi", "port d'air", "gare", "restaurant", "ciel", "trafic", "espagnol", "allemand" , "italie", "français", "portugais", "turque", "finlandais", "hollandais", "japonais");
 			French.commonNouns.setWordsTo(wordSetArray);
 			
 			//Verbs
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", "aider", "go", "talk", "voir", "get", "courir", "marcher", "entendre", "lire", "acheter", "vendre", "téléphone",
+			wordSetArray.push(	"easyList", "aider", "aller", "parler", "voir", "obtenir", "courir", "marcher", "entendre", "lire", "acheter", "vendre", "téléphone",
 								"mediumList", "texte", "prendre", "disque", "attendre", "parler", "nager", "apprendre", "sommeil", "donner", "assis", "debout",
 								"hardList", "prononcer", "choisir", "savoir", "construire", "travail", "odeur", "voyage", "attendre", "sentir");
-								
-								
-			French.commonNouns.setWordsTo(wordSetArray);
+			French.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList", "bon", "mauvais", "joli", "laid", "grand", "petit", "heureux", "triste", "froid", "chaud",
-								"mediumList", "fatigué", "grand", "court", "portrait", "muet", "en colère", "loud", "calme", "rapide", "lent",
+								"mediumList", "fatigué", "grandiose", "court", "portrait", "muet", "en colère", "fort", "calme", "rapide", "lent",
 								"hardList", "lumineux", "noir", "clair", "confus", "ennuyeux", "rude", "poli", "cher", "pas cher");
-			French.commonNouns.setWordsTo(wordSetArray);
+			French.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-								"mediumList", 10, 20, 30, 40, 50, 60, 70, 80, 90,
-								"hardList", 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 10000, 100000, 1000000);
-			French.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push(	"EasyList", "zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix",
+								"mediumList", "vingt", "trente", "quarante", "cinquante", "soixante", "soixante", "quatre-vingts", "quatre-vingt-dix", "cent",
+								"hardList", "deux cents", "trois cents", "quatre cent", "cinq cents", "six cents", "sept cents", "huit cents", "neuf cent", "mille", "dix mille","cent mille","un million");
+			French.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"EasyList", "maison", "moi", "acheter", "go", "portable", "magasin", "voiture", "voiture", "marche", "courir", "cycle", "train "," bus "," parler "," manger "," boisson "," hôtel ",
-								"mediumList", "monsieur", "madame", "petit", "repas", "cuisine", "route", "voyage", "emprunter", "taxi", "argent", "bonjour", "bateau "," plan "," plage ",
+			wordSetArray.push(	"EasyList", "maison", "moi", "acheter", "go", "téléphone", "magasin", "voiture", "conduire", "marche", "courir", "faire du vélo", "train","bus","parler","manger","boisson","hôtel",
+								"mediumList", "monsieur", "madame", "petit", "repas", "souper", "route", "voyage", "emprunter", "taxi", "argent", "bonjour", "bateau "," plan "," plage ",
 								"hardList", "appartement", "épicerie", "port d'air", "gare", "restaurant", "ciel", "trafic", "direction", "adresse", "chaud", "touriste");
 			French.travel.setWordsTo(wordSetArray);
 			
@@ -248,7 +248,7 @@
 
 			//Activities
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"FIRSTLIST", "football", "tennis", "basketball", "hockey", "golf", "cricket", "baseball", "rugby", "badminton", "courge",
+			wordSetArray.push(	"firstList", "football", "tennis", "basket-ball", "hockey", "golf", "cricket", "base-ball", "rugby", "badminton", "courge",
 								"secondList", "achats", "marche", "baignade", "lecture", "cheval", "musique", "bain de soleil", "relaxant", "voir de vue");
 			French.activities.setWordsTo(wordSetArray);
 			
@@ -256,26 +256,27 @@
 			
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("Je", "il", "elle", "ils", "nous", "ils", "vous", "vous", "it");
-			French.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push("je", "il", "elle", "ils", "nous", "ils", "vous", "vous", "it");
+			French.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("rouge", "orange", "rouge", "bleu", "jaune", "noir", "blanc", "vert", "rose", "gris", "brun");
+			wordSetArray.push("rouge", "orange", "jaune", "bleu", "jaune", "noir", "blanc", "vert", "rose", "gris", "brun");
 			French.colours.setWordsTo(wordSetArray);
 			
 			//Countries
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("america"​​, "canada", "angleterre", "australie", "France", "espagne", "mexique", "bresil", "allemagne", "russie", "suède", "chine", "japon "," inde "," hollandaise "," egypte "," italie "," turquie ");
+			wordSetArray.push("amérique"​​, "canada", "angleterre", "australie", "france", "espagne", "mexique", "bresil", "allemagne", "russie", "suède", "chine", "japon","inde","hollandaise","egypte","italie","turquie");
 			French.countries.setWordsTo(wordSetArray);
 			
 			
 			
-			////////////////////////////////////////////////////////////////////ITALIAN\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+			/*///////////////////////////////////////////////////////////////////ITALIAN\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
 			
 			//Nouns
+			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList", "cane", "gatto", "uomo", "donna", "ragazza", "ragazzo", "auto", "caffè", "spiaggia", "casa", "alimento", "bere "," me "," bambino "," bianco "," libro "," tavolo "," sedia "," telefono "," negozio "," letto "," giornata "," tazza "," turista ",
 								"mediumList", "animale", "persona", "cameriere", "signore", "denaro", "signora", "piano", "barca", "treno", "autobus", "fiume", "colazione "," pranzo "," cena "," strada "," dessert "," desertico "," bagno "," nome "," cameriere "," albergo "," inglese ",
 								"hardList", "ascensore", "appartamento", "negozio", "taxi", "aria porto", "stazione ferroviaria" "ristorante", "costruzione", "traffico", "spagnolo", "tedesco" , "italiano", "francese", "portuguese", "turco", "finlandese", "dutch", "giapponese");
@@ -286,21 +287,21 @@
 			wordSetArray.push(	"EasyList", "aiuto", "andare", "parlare", "vedere", "get", "correre", "camminare", "ascoltare", "leggere", "acquistare", "vendere", "telefono ",
 								"mediumList", "testo", "prendere", "guida", "aspettare", "parlare", "nuotare", "imparare", "sonno", "dare", "sedersi", "stare in piedi",
 								"hardList", "pronunciare", "scegliere", "conoscere", "costruire", "lavoro", "odore", "viaggio", "aspettare", "sentire");
-			Italian.commonNouns.setWordsTo(wordSetArray);
+			Italian.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList", "buono", "cattivo", "ragazza", "brutto", "grande", "piccolo", "felice", "triste", "freddo", "caldo",
 								"mediumList", "stanco", "alto", "breve", "intelligente", "stupido", "arrabbiato", "forte", "tranquillo", "veloce", "lento",
 								"hardList", "brillante", "scuro", "chiaro", "confuso", "fastidioso", "rude", "gentile", "costoso", "economico");
-			Italian.commonNouns.setWordsTo(wordSetArray);
+			Italian.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-								"mediumList", 10, 20, 30, 40, 50, 60, 70, 80, 90,
-								"hardList", 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 10000, 100000, 1000000);
-			Italian.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push(	"EasyList", "zero", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci",
+								"mediumList", "20", "30", "40", "50", "60", "70", "80", "90", "100",
+								"hardList", "200", "300", "400", "500", "600", "700", "800", "900", "1000", "10000 "," 100000 "," un milione ");
+			Italian.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
@@ -334,7 +335,7 @@
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("I", "lui", "lei", "loro", "noi", "loro", "tu", "voi", "it");
-			Italian.commonNouns.setWordsTo(wordSetArray);
+			Italian.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
 			wordSetArray.splice(0, wordSetArray.length);
@@ -344,7 +345,7 @@
 			//Countries
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("america", "Canada", "inghilterra", "australia", "francia", "spagna", "messico", "brasile", "germania", "russia", "svezia", "cina", "giappone "," india "," olanda "," egitto "," Italia "," tacchino ");
-			Italian.countries.setWordsTo(wordSetArray);
+			Italian.countries.setWordsTo(wordSetArray);*/
 			
 			
 			
@@ -353,84 +354,85 @@
 			
 			
 			//Nouns
-			wordSetArray.push(	"EasyList", "dog", "cat", "mann", "Frau", "frau", "boy", "auto", "coffee", "beach", "haus", "essen", "trinken "," mir "," kind "," Vogel "," buch "," tisch "," Stuhl "," phone "," shop "," bett "," Tag "," tee "," tourist ",
-								"mediumList", "animal", "person", "Kellner", "Sir", "geld", "Madame", "plane", "boot", "trainieren", "bus", "river", "Frühstück "," lunch "," essen "," Straße "," essen "," Wüste "," bathroom "," name "," Kellner "," hotel "," Englisch ",
-								"hardList", "elevator", "apartment", "Supermarkt", "taxi", "Luft-Port", "train station", "restaurant", "entwerfen", "Verkehr", "spanisch", "Deutsch" , "italienisch", "französisch", "portugiesisch", "türkisch", "finnisch", "holland", "japanisch");
+			wordSetArray.splice(0, wordSetArray.length);
+			wordSetArray.push(	"EasyList", "hund", "katze", "mann", "frau", "frau", "junge", "auto", "kaffee", "strand", "haus", "essen", "trinken","mir","kind","vogel","buch","tisch","stuhl","telefon","geschäft","bett","tag","tee","tourist",
+								"mediumList", "animal", "person", "kellner", "herr", "geld", "frau", "plane", "boot", "trainieren", "bus", "fluss", "frühstück","lunch","essen","straße","essen","wüste","badezimmer","name","kellner","hotel","englisch",
+								"hardList", "aufzug", "wohnung", "supermarkt", "taxi", "luft-port", "bahnhof", "restaurant", "entwerfen", "verkehr", "spanisch", "deutsch" , "italienisch", "französisch", "portugiesisch", "türkisch", "finnisch", "holland", "japanisch");
 			German.commonNouns.setWordsTo(wordSetArray);
 			
 			//Verbs
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"EasyList", "hilfe", "gehen", "talk", "sehen", "get", "laufen", "laufen", "hören", "lesen", "kaufen", "verkaufen", "phone "
+			wordSetArray.push(	"EasyList", "hilfe", "gehen", "sprechen", "sehen", "bekommen", "laufen", "laufen", "hören", "lesen", "kaufen", "verkaufen", "telefon",
 								"mediumList", "text", "nehmen", "fahren", "warten", "sprechen", "schwimmen", "lernen", "schlafen", "geben", "sitzen", "stehen",
-								"hardList", "sprechen", "entscheiden", "wissen", "bauen", "Arbeit", "Geruch", "reisen", "warten", "fühlen");
-			German.commonNouns.setWordsTo(wordSetArray);
+								"hardList", "sprechen", "entscheiden", "wissen", "bauen", "arbeit", "geruch", "reisen", "warten", "fühlen");
+			German.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"EasyList", "gut", "schlecht", "schön", "hässlich", "big", "klein", "glücklich", "traurig", "kalt", "hot",
+			wordSetArray.push(	"EasyList", "gut", "schlecht", "schön", "hässlich", "groß", "klein", "glücklich", "traurig", "kalt", "heiß",
 								"mediumList", "müde", "hoch", "kurz", "pfiffig", "dumm", "aufgebracht", "laut", "ruhig", "schnell", "langsam",
-								"hardList", "hell", "dunkel", "klar", "verwirrt", "ärgerlich", "rude", "höflich", "teuer", "billig");
-			German.commonNouns.setWordsTo(wordSetArray);
+								"hardList", "hell", "dunkel", "klar", "verwirrt", "ärgerlich", "unhöflich", "höflich", "teuer", "billig");
+			German.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-								"mediumList", 10, 20, 30, 40, 50, 60, 70, 80, 90,
-								"hardList", 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 10000, 100000, 1000000);
-			German.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push(	"EasyList", "null", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn",
+								"mediumList", "20", "30", "40", "50", "60", "70", "80", "90", "hundert",
+								"hardList", "200", "300", "400", "500", "600", "700", "800", "900", "tausend", "zehntausend","hunderttausend","million");
+			German.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"EasyList", "haus", "mir", "kaufen", "gehen", "phone", "shop", "auto", "fahren", "gehen", "laufen", "cycle", "train "," bus "," sprechen "," essen "," trinken "," hotel ",
-								"mediumList", "Sir", "Madame", "Frühstück", "Mittagessen", "Abendessen", "reisen", "reisen", "borgen", "taxi", "geld", "hallo", "boot "," plane "," beach ",
-								"hardList", "apartment", "Supermarkt", "Luft-Port", "train station", "restaurant", "entwerfen", "Verkehr", "Richtung", "Adresse", "coffee", "tourist");
+			wordSetArray.push(	"EasyList", "haus", "mir", "kaufen", "gehen", "telefon", "geschäft", "auto", "fahren", "gehen", "laufen", "radeln", "zug","bus","sprechen","essen","trinken","hotel",
+								"mediumList", "herr", "frau", "frühstück", "mittagessen", "abendessen", "reisen", "reisen", "borgen", "taxi", "geld", "hallo", "boot","flugzeug","strand",
+								"hardList", "wohnung", "supermarkt", "luft-port", "bahnhof", "restaurant", "entwerfen", "verkehr", "richtung", "adresse", "kaffee", "tourist");
 			German.travel.setWordsTo(wordSetArray);
 			
 			
 			
 			//Family
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"firstList", "Vater", "Mutter", "Bruder", "sister", "sohn", "Tochter",
-								"secondList", "Onkel", "Tante", "Großvater", "Großmutter", "Cousin", "Neffe", "Nichte");
+			wordSetArray.push(	"firstList", "vater", "mutter", "bruder", "schwester", "sohn", "tochter",
+								"secondList", "onkel", "tante", "großvater", "großmutter", "cousin", "neffe", "nichte");
 			German.family.setWordsTo(wordSetArray);
 			
 			//Phrases
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"firstList", "Hallo", "Guten Morgen", "Guten Tag", "Guten Abend", "Gute Nacht", "Auf Wiedersehen", "Ich verstehe nicht", "mein Name ist-",
-								"secondList", "wie viel-", "Do You Speak-", "wo ist-", "wie viel ist-", "excuse me", "danke", "Du bist willkommen");
+			wordSetArray.push(	"firstList", "hallo", "guten morgen", "guten tag", "guten abend", "gute nacht", "auf wiedersehen", "ich verstehe nicht", "mein name ist-",
+								"secondList", "wie viel-", "sprechen sie-", "wo ist-", "wie viel ist-", "excuse me", "danke", "du bist willkommen");
 			German.phrases.setWordsTo(wordSetArray);
 
 			//Activities
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"firstList", "ball", "tennis", "basketball", "hockey", "golf", "Cricket", "baseball", "Rugby", "badminton", "squash",
-								"secondList", "shopping", "Fuß", "schwimmen", "Lesen", "reiten", "musik", "sonnen", "entspannt", "sight seeing");
+			wordSetArray.push(	"firstList", "ball", "tennis", "korbball", "eishockey", "golf", "kricket", "baseball", "rugby", "federball", "squash",
+								"secondList", "einkaufen", "fuß", "schwimmen", "lesen", "reiten", "musik", "sonnen", "entspannt", "besichtigung");
 			German.activities.setWordsTo(wordSetArray);
 			
 			
 			
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("I", "er", "sie", "sie", "uns", "sie", "du", "Sie (Plural)", "es");
-			German.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push("ich", "er", "sie", "sie", "uns", "sie", "du", "sie", "es");
+			German.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("rot", "orange", "gelb", "blau", "lila", "black", "white", "green", "pink", "grau", "braun");
+			wordSetArray.push("rot", "orange", "gelb", "blau", "lila", "schwarz", "weiß", "grün", "rosafarben", "grau", "braun");
 			German.colours.setWordsTo(wordSetArray);
 			
 			//Countries
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("amerika", "canada", "england", "australien", "frankreich", "Spanien", "mexico", "brasilien", "Deutschland", "russisch", "schweden", "china", "japan "," indien "," holland "," Ägypten "," italien "," turkey ");
+			wordSetArray.push("amerika", "kanada", "england", "australien", "frankreich", "spanien", "mexico", "brasilien", "deutschland", "russisch", "schweden", "china", "japan","indien","holland","Ägypten","italien","türkei");
 			German.countries.setWordsTo(wordSetArray);
 			
 			
 			
-			////////////////////////////////////////////////////////////////////JAPANESE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-			
+			/*///////////////////////////////////////////////////////////////////JAPANESE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
 			
 			//Nouns
+			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList", "inu", "neko", "dansei", "josei", "on'nanoko", "otokonoko" , "-sha", " kōhī", "bīchi", "jūtaku", "shokuhin", "inryō ", "watashi", "kodomo", "tori" , "hon" , "tēburu" , "isu" , "denwa" , "shoppu", "beddo", "-bi" , "cha","kankō" , 
 							  	"MediumList" , "dōbutsu" , "hito" , "u~eitā" , "sā" , "okane" , "madamu", "hikōki" , "bōto" , "densha" , "basu" , "kawa", "chōshoku ","chūshoku","yūshoku","dōro","dezāto","sabaku","yokushitsu","namae","ueitā","hoteru" , "eigo" , 
 							  	"HardList", "erebētā", "manshon","shokuryōhin-ten","takushī","eāpōto","-eki","resutoran","tatemono","torafikku","supeingo","doitsugo","itaria-go","furansugo","porutogaru-go","nihongo" , "oranda", "finrando", "toruko");
@@ -441,21 +443,21 @@
 			wordSetArray.push(	"EasyList", "uru" , "kau" , "geitaidenwa o yomu" , "kiku", "aruku", "jikkō", "shutoku", "miru" , "tōku", "iku" , "herupu",
 							  	"MediumList" , "tekisuto" , "tatsu", "suwaru", "ataeru", "manabu", "oyogu", "hanasu", "suimin", "matsu", "doraibu o toru", 
 							 	"HardList", " kōchiku" , " shitte iru" , " sentaku" , " shigoto", " kaori" , " ryokō", " taiki" o" hatsuon" , " kanjiru");
-			Japanese.commonNouns.setWordsTo(wordSetArray);
+			Japanese.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList" , " yoi" , " warui" , " atsui", " samui", " kanashī", " ureshī", " ko" , " dai" , " minikui" , " kirei" , 
 							  	"MediumList", " osoi" , " hayai" , " shizuka", " sōzōshī", " ikari" , " dumb" wa, " sumāto" , " shōto" , " senotakai", " tsukareta" 
 							  	"HardList" , " yasui" , " kōka", " reigi tadashī", " shitsurei", " urusai", " konran" , " kuria" , " kurai" , " akarui");
-			Japanese.commonNouns.setWordsTo(wordSetArray);
+			Japanese.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
 								"mediumList", 10, 20, 30, 40, 50, 60, 70, 80, 90,
 								"hardList", 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 10000, 100000, 1000000);
-			Japanese.commonNouns.setWordsTo(wordSetArray);
+			Japanese.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
@@ -489,7 +491,7 @@
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(" Watashi" , " kare" , " kanojo", " karera", " watashitachi" wa, " karera", " anata" , " anatatachi" , " sore");
-			Japanese.commonNouns.setWordsTo(wordSetArray);
+			Japanese.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
 			wordSetArray.splice(0, wordSetArray.length);
@@ -508,6 +510,7 @@
 			
 			
 			//Nouns
+			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "koira", "kissa", "mies", "nainen", "tyttö", "poika", "auto", "kahvi", "beach", "talo", "ruoka", "juoma "," me "," lapsi "," lintu "," kirja "," taulukko "," tuoli "," puhelin "," kauppa "," sänky "," päivä "," tee "," turisti ",
 								"mediumList", "eläin", "henkilö", "tarjoilija", "herra", "rahaa", "rouva", "taso", "vene", "juna", "bus", "river", "breakfast "," lounas "," illallinen "," tie "," jälkiruoka "," Desert "," kylpyhuone "," name "," tarjoilija "," hotelli "," Englanti ",
 								"hardList", "hissi", "apartment", "ruokakauppaan", "taksi", "air port", "juna-asema", "ravintola", "rakennus", "liikenne", "espanja", "german" "Italian", "ranskalainen", "Portugali", "turkki", "suomalainen", "dutch", "japanilainen");
@@ -518,21 +521,21 @@
 			wordSetArray.push(	"easyList", "help", "go", "Talk", "nähdä", "saada", "ajaa", "kävellä", "kuulla", "lukea", "osta", "myy", "puhelin "
 								"mediumList", "text", "ottaa", "ajaa", "odottaa", "puhuvat", "uida", "oppia", "uni", "anna", "istu", "seiso",
 								"hardList", "ääntää", "valita", "tietää", "rakentaa", "työ", "haistaa", "matka", "odottaa", "tuntuu");
-			Finnish.commonNouns.setWordsTo(wordSetArray);
+			Finnish.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "hyvä", "huono", "pretty", "ruma", "iso", "pieni", "onnellinen", "surullinen", "kylmää", "kuuma",
 								"mediumList", "väsynyt", "pitkä", "lyhyt", "älykäs", "tyhmä", "vihainen", "voimakas", "hiljaa", "nopea", "hidas",
 								"hardList", "kirkas", "pimeä", "kirkas", "sekava", "ärsyttävä", "rude", "kohtelias", "kallis", "halpa");
-			Finnish.commonNouns.setWordsTo(wordSetArray);
+			Finnish.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-								"mediumList", 10, 20, 30, 40, 50, 60, 70, 80, 90,
-								"hardList", 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 10000, 100000, 1000000);
-			Finnish.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push(	"easyList", "nolla", "yksi", "kaksi", "kolme", "neljä", "viisi", "kuusi", "seitsemän", "kahdeksan", "yhdeksän", "kymmenen",
+								"mediumList", "kaksikymmentäyksi", "Thirty", "Neljäkymmentä", "viisikymmentä", "kuusikymmentä", "seitsemänkymmentä", "Kahdeksankymmentä", "yhdeksänkymmentä", "sata"
+								"hardList", "kaksi sata", "kolme sata", "neljä sata", "viisi sata", "kuuden sata", "Seitsemän sata", "kahdeksan sata", "yhdeksän sata", "yksi tuhat", "kymmenentuhatta "," sata tuhat "," miljoona ");
+			Finnish.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
@@ -566,7 +569,7 @@
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("Minä", "hän", "hän", "he", "meitä", "he", "sinä", "sinun", "se");
-			Finnish.commonNouns.setWordsTo(wordSetArray);
+			Finnish.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
 			wordSetArray.splice(0, wordSetArray.length);
@@ -576,44 +579,45 @@
 			//Countries
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("America", "Kanada", "englanti", "Australia", "RANSKA", "Espanja", "Meksiko", "Brasilia", "Saksa", "Venäjä", "Ruotsi", "Kiina", "Japan "," Intia "," Hollanti "," Egypti "," Italia "," kalkkuna ");
-			Finnish.countries.setWordsTo(wordSetArray);
+			Finnish.countries.setWordsTo(wordSetArray);*/
 			
 			
 			////////////////////////////////////////////////////////////////////TURKISH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
 			//Nouns
-			wordSetArray.push(	"easyList", "köpek", "kedi", "adam", "kadın", "kız", "çocuk", "araba", "kahve", "plaj", "ev", "yiyecek", "içki "," bana "," çocuk "," kuş "," kitap "," masa "," sandalye "," telefon "," alışveriş "," yatak "," gün "," çay "," turist ",
-								"mediumList", "hayvan", "insan", "garson", "efendim", "para", "hanımefendi", "uçak", "tekne", "tren", "Otobüs", "nehir", "kahvaltı "," yemek "," yemek "," yol "," tatlı "," çöl "," banyo "," isim "," garson "," otel "," İngilizce ",
-								"hardList", "asansör", "daire", "bakkal", "taksi", "hava limanı", "tren istasyonu", "restoran", "Bina", "trafik", "ispanyolca", "almanca" , "İtalyan", "Fransız", "portekizce", "Japon", "hollanda", "Fin", "türk");
+			wordSetArray.splice(0, wordSetArray.length);
+			wordSetArray.push(	"easyList", "köpek", "kedi", "adam", "kadın", "kız", "çocuk", "araba", "kahve", "plaj", "ev", "yiyecek", "içki","bana","çocuk","kuş","kitap","masa","sandalye","telefon","alışveriş","yatak","gün","çay","turist",
+								"mediumList", "hayvan", "insan", "garson", "efendim", "para", "hanımefendi", "uçak", "tekne", "tren", "Otobüs", "nehir", "kahvaltı","yemek","yemek","yol","tatlı","çöl","banyo","isim","garson","otel","İngilizce",
+								"hardList", "asansör", "daire", "bakkal", "taksi", "hava limanı", "tren istasyonu", "restoran", "bina", "trafik", "ispanyolca", "almanca" , "İtalyan", "fransız", "portekizce", "japon", "hollanda", "fin", "türk");
 			Turkish.commonNouns.setWordsTo(wordSetArray);
 			
 			//Verbs
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", "satmak", "satın alma", "telefon", "okumak", "duymak", "yürüyüş", "koşmak", "almak", "görmek", " konuşma "," gitmek "," yardım ", "
-								"mediumList", "metin", "ayakta", "oturmak", "vermek", "öğrenme", "yüzmek", "konuşma", "uyku", "beklemek", "sürücü" "almak"
-								"hardList", "inşa", "bilmek", "tercih", "iş", "koku", "seyahat etmek", "beklemek" "telaffuz", "hissediyorum");
-			Turkish.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push(	"easyList", "satmak", "satın alma", "telefon", "okumak", "duymak", "yürüyüş", "koşmak", "almak", "görmek", "konuşma","gitmek","yardım",
+								"mediumList", "metin", "ayakta", "oturmak", "vermek", "öğrenme", "yüzmek", "konuşma", "uyku", "beklemek", "sürücü", "almak",
+								"hardList", "inşa", "bilmek", "tercih", "iş", "koku", "seyahat etmek", "beklemek", "telaffuz", "hissediyorum");
+			Turkish.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", "iyi", "kötü", "sıcak", "soğuk", "sad", "mutlu", "küçük", "büyük", "çirkin", "sevimli",
-								"mediumList", "yavaş", "hızlı", "sakin", "yüksek sesle", "öfkeli", "aptal", "akıllı", "kısa", "uzun boylu", "yorgun"
+			wordSetArray.push(	"easyList", "iyi", "kötü", "sıcak", "soğuk", "üzücü", "mutlu", "küçük", "büyük", "çirkin", "sevimli",
+								"mediumList", "yavaş", "hızlı", "sakin", "yüksek sesle", "öfkeli", "aptal", "akıllı", "kısa", "uzun boylu", "yorgun",
 								"hardList", "ucuz", "pahalı", "nazik", "kaba", "can sıkıcı", "karışık", "clear", "koyu", "parlak");
-			Turkish.commonNouns.setWordsTo(wordSetArray);
+			Turkish.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-								"mediumList", 10, 20, 30, 40, 50, 60, 70, 80, 90,
-								"hardList", 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 10000, 100000, 1000000);
-			Turkish.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push(	"easyList", "sıfır", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz", "on",
+								"mediumList", "doksan", "yüz", "seksen", "yetmiş", "altmış", "elli", "kırk", "yirmi", "otuz",
+								"hardList", "iki yüz", "üç yüz", "dört yüz", "beş yüz", "altı yüz", "yedi yüz", "sekiz yüz", "dokuz yüz", "bin", "on bin","yüz bin","bir milyon");
+			Turkish.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", "ev", "bana", "gitmek", "telefon", "alışveriş", "araba", "sürücü", "yürüyüş", "run", "döngü", "tren" satın ""," otobüs "," konuşma "," yemek "," içki "," otel ",
-								"mediumList", "efendim", "hanımefendi", "kahvaltı", "yemek", "yemek", "yol", "seyahat etmek", "ödünç", "taksi", "para", "merhaba", "tekne "," uçak "," plaj ",
-								"hardList", "daire", "bakkal", "hava limanı", "tren istasyonu", "restoran", "Bina", "trafik", "yön", "adres", "kahve", "turist");
+			wordSetArray.push(	"easyList", "ev", "bana", "gitmek", "telefon", "alışveriş", "araba", "sürücü", "yürüyüş", "çalıştırmak", "döngü", "tren", "satın","otobüs","konuşma","yemek","içki","otel",
+								"mediumList", "efendim", "hanımefendi", "kahvaltı", "yemek", "yemek", "yol", "seyahat etmek", "ödünç", "taksi", "para", "merhaba", "tekne","uçak","plaj",
+								"hardList", "daire", "bakkal", "hava limanı", "tren istasyonu", "restoran", "bina", "trafik", "yön", "adres", "kahve", "turist");
 			Turkish.travel.setWordsTo(wordSetArray);
 			
 			
@@ -621,13 +625,13 @@
 			//Family
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"firstList", "baba", "anne", "kardeş", "kız kardeş", "oğlum", "kızım",
-								"secondList", "amca", "teyze", "dede", "büyükanne", "kuzen", "yeğen", "niece");
+								"secondList", "amca", "teyze", "dede", "büyükanne", "kuzen", "yeğen", "yeğen");
 			Turkish.family.setWordsTo(wordSetArray);
 			
 			//Phrases
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"firstList", "merhaba", "günaydın", "iyi günler", "iyi akşamlar", "iyi geceler", "güle güle", "benim adım-", "Anlamıyorum"
-								"secondList", "-ne kadar", "konuşma-sen yaparsın" "nerede-", "ne kadar-", "Bir şey değil", "teşekkür ederim", "affedersiniz");
+			wordSetArray.push(	"firstList", "merhaba", "günaydın", "iyi günler", "iyi akşamlar", "iyi geceler", "güle güle", "benim adım-", "anlamıyorum",
+								"secondList", "-ne kadar", "konuşma-sen yaparsın", "nerede-", "ne kadar-", "bir şey değil", "teşekkür ederim", "affedersiniz");
 			Turkish.phrases.setWordsTo(wordSetArray);
 
 			//Activities
@@ -640,8 +644,8 @@
 			
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("Ben", "o", "o", "onlar", "bize", "onlar", "sen", "siz)", "o");
-			Turkish.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push("Ben", "o", "o", "onlar", "bize", "onlar", "sen", "siz", "o");
+			Turkish.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
 			wordSetArray.splice(0, wordSetArray.length);
@@ -650,16 +654,17 @@
 			
 			//Countries
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push("america", "kanada", "england", "Avustralya", "fransa", "İspanya", "meksika", "brezilya", "almanya", "Rusya", "isveç", "Çin", "Japonya "," Hindistan "," holland "," Mısır "," İtalya "," turkey ");
+			wordSetArray.push("Amerika", "kanada", "İngiltere", "avustralya", "fransa", "İspanya", "meksika", "brezilya", "almanya", "rusya", "isveç", "Çin", "japonya","hindistan","hollanda","Mısır","İtalya","türkiye");
 			Turkish.countries.setWordsTo(wordSetArray);
 			
 			
 			
-			////////////////////////////////////////////////////////////////////DUTCH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+			/*///////////////////////////////////////////////////////////////////DUTCH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
 			
 			//Nouns
+			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "köpek", "kedi", "adam", "kadın", "kız", "çocuk", "araba", "kahve", "plaj", "ev", "yiyecek", "içki "," bana "," çocuk "," kuş "," kitap "," masa "," sandalye "," telefon "," alışveriş "," yatak "," gün "," çay "," turist ",
 								"mediumList", "hayvan", "insan", "garson", "efendim", "para", "hanımefendi", "uçak", "tekne", "tren", "Otobüs", "nehir", "kahvaltı "," yemek "," yemek "," yol "," tatlı "," çöl "," banyo "," isim "," garson "," otel "," İngilizce ",
 								"hardList", "asansör", "daire", "bakkal", "taksi", "hava limanı", "tren istasyonu", "restoran", "Bina", "trafik", "ispanyolca", "almanca" , "İtalyan", "Fransız", "portekizce", "Japon", "hollanda", "Fin", "türk");
@@ -670,21 +675,21 @@
 			wordSetArray.push(	"easyList", "," satmak "," satın alma ", telefon" okumak "," duymak "," yürüyüş "," run "," almak "," görmek "," konuşma "," gitmek "," yardım ", "
 								"mediumList", "metin", "ayakta", "oturmak", "vermek", "öğrenme", "yüzmek", "konuşma", "uyku", "beklemek", "sürücü" "almak"
 								"hardList", "inşa", "bilmek", "tercih", "iş", "koku", "seyahat etmek", "beklemek" "telaffuz", "hissediyorum");
-			Dutch.commonNouns.setWordsTo(wordSetArray);
+			Dutch.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "iyi", "kötü", "sıcak", "soğuk", "sad", "mutlu", "küçük", "büyük", "çirkin", "sevimli",
 								"mediumList", "yavaş", "hızlı", "sakin", "yüksek sesle", "öfkeli", "aptal", "akıllı", "kısa", "uzun boylu", "yorgun"
 								"hardList", "ucuz", "pahalı", "nazik", "kaba", "can sıkıcı", "karışık", "clear", "koyu", "parlak");
-			Dutch.commonNouns.setWordsTo(wordSetArray);
+			Dutch.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-								"mediumList", 10, 20, 30, 40, 50, 60, 70, 80, 90,
-								"hardList", 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 10000, 100000, 1000000);
-			Dutch.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push(	"easyList", "nul", "een", "twee", "drie", "vier", "vijf", "zes", "zeven", "acht", "negen", "tien",
+								"mediumList", "twintig", "dertig", "veertig", "vijftig", "zestig", "zeventig", "tachtig", "negentig", "honderd",
+								"hardList", "twee honderd", "driehonderd", "vier honderd", "vijf honderd", "zeshonderd", "zeven honderd", "acht honderd", "negen honderd", "duizend", "ten thousand "," honderdduizend "," een miljoen ");
+			Dutch.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
@@ -718,7 +723,7 @@
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("Ben", "o", "o", "onlar", "bize", "onlar", "sen", "siz (çoğul)", "o");
-			Dutch.commonNouns.setWordsTo(wordSetArray);
+			Dutch.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
 			wordSetArray.splice(0, wordSetArray.length);
@@ -737,6 +742,7 @@
 			
 
 			//Nouns
+			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList", "cachorro", "gato", "homem", "mulher", "menina", "menino", "carro", "café", "praia", "casa", "alimento", "bebida "," me "," criança "," pássaro "," livro "," mesa "," cadeira "," telefone "," loja "," cama "," dia "," chá "," turista ",
 								"mediumList", "animal", "pessoa", "garçom", "senhor", "dinheiro", "senhora", "plano", "barco", "trem", "ônibus", "rio", "Café da manhã "," lunch "," jantar "," road "," doce "," deserto "," banheiro "," nome "," garçom "," hotel "," Inglês ",
 								"hardList", "Elevador", "apartamento", "mercearia", "táxi", "porto de ar", "estação de trem", "restaurant", "casa", "Traffic", "espanhol", "german" , "italiano", "french", "português", "turco", "finlandês", "holandês", "japonês");
@@ -747,21 +753,21 @@
 			wordSetArray.push(	"EasyList", "help", "ir", "falar", "ver", "começar", "correr", "andar", "ouvir", "ler", "comprar", "vender", "telefone "
 								"mediumList", "text", "tome", "unidade", "esperar", "falar", "nadar", "aprender", "sleep", "dar", "sentar", "ficar",
 								"hardList", "pronunciar", "escolha", "conhecer", "construir", "trabalho", "cheiro", "viajar", "esperar", "sentir");
-			Portuguese.commonNouns.setWordsTo(wordSetArray);
+			Portuguese.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"EasyList", "bom", "ruim", "bonito", "feio", "grande", "pequeno", "feliz", "triste", "frio", "quente",
 								"mediumList", "cansado", "alto", "curto", "inteligente", "burro", "irritado", "alto", "calma", "fast", "lento",
 								"hardList", "brilhante", "negro", "claro", "confuso", "chato", "rude", "educado", "caro", "barato");
-			Portuguese.commonNouns.setWordsTo(wordSetArray);
+			Portuguese.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-								"mediumList", 10, 20, 30, 40, 50, 60, 70, 80, 90,
-								"hardList", 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 10000, 100000, 1000000);
-			Portuguese.commonNouns.setWordsTo(wordSetArray);
+			wordSetArray.push(	"EasyList", "zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "10",
+								"mediumList", "20", "30", "40", "50", "60", "70", "80", "90", "cem",
+								"hardList", "200", "300", "400", "500", "600", "700", "800", "900", "mil", "10000 "," cem mil "," um milhão ");
+			Portuguese.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
 			wordSetArray.splice(0, wordSetArray.length);
@@ -795,7 +801,7 @@
 			//Pronouns
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("Eu", "ele", "ela", "eles", "nós", "eles", "você", "você (plural)", "ele");
-			Portuguese.commonNouns.setWordsTo(wordSetArray);
+			Portuguese.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
 			wordSetArray.splice(0, wordSetArray.length);
@@ -824,8 +830,8 @@
 			{
 				//Each gametype has its own way of submitting answers. I reckon this is a good alternative to using Polymorphism, which frankly I haven't figured out yet.
 				case "FlashCards" :
-					//The expected answer is the English version of the current word (which is currently in a foreign language, depending on the outputLanguage)
-					expectedAnswer = currentGame.translateWord(outputLanguage,inputLanguage,currentGame.currentWord);
+					//The expected answer is the translation of the current word
+					expectedAnswer = currentGame.translateWord(outputLanguage,inputLanguage,currentGame.chosenCategory, currentGame.chosenSubcategory, currentGame.currentWord);
 					if (inputText == expectedAnswer)
 					{
 						//If it's correct, increase the count of correct answers

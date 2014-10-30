@@ -6,7 +6,7 @@
 		public var easyList:Array = new Array();
 		public var mediumList:Array = new Array();
 		public var hardList:Array = new Array();
-
+		
 		public function CategoryLarge(categoryName:String) {
 			super(categoryName);
 		}
@@ -16,20 +16,21 @@
 			aName = aName.toLowerCase();
 			switch (aName)
 			{
-				case "easyList":
+				case "easylist":
 					return(easyList);
-					break
-				case "mediumList":
+					break;
+				case "mediumlist":
 					return(mediumList);
-					break
-				case "hardList":
+					break;
+				case "hardlist":
 					return(hardList);
-					break
+					break;
+				case "allwords":
+					return(everyWord);
+					break;
 				default:
 					return(easyList);
 			}
-			
-			return(returnList);
 		}
 		
 		override public function setWordsTo(allWords:Array):void
@@ -46,15 +47,16 @@
 			for (var i:uint = 0; i < allWords.length; i++)
 			{
 				//If the word is the name of one of the lists:
-				if (allWords[i].toLowerCase()=="easyList" || allWords[i].toLowerCase()=="mediumList" || allWords[i].toLowerCase()=="hardList")
+				if (allWords[i].toLowerCase()=="easylist" || allWords[i].toLowerCase()=="mediumlist" || allWords[i].toLowerCase()=="hardlist")
 				{
 					//Set the chosen list to the list specified in that cell
-					chosenList = allWords[i];
+					chosenList = getListByName(allWords[i]);
 				}
 				else
 				{
 					//Add the word to the last specified list
-					chosenList.push(allWords[i])
+					chosenList.push(allWords[i]);
+					everyWord.push(allWords[i]);
 				}
 			}
 		}

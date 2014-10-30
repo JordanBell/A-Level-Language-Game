@@ -17,15 +17,16 @@
 			{
 				case "set1":
 					return(firstList);
-					break
+					break;
 				case "set2":
 					return(secondList);
-					break
+					break;
+				case "allwords":
+					return(everyWord);
+					break;
 				default:
 					return(firstList);
 			}
-			
-			return(returnList);
 		}
 		
 		override public function setWordsTo(allWords:Array):void
@@ -41,15 +42,16 @@
 			for (var i:uint = 0; i < allWords.length; i++)
 			{
 				//If the word is the name of one of the lists:
-				if (allWords[i].toLowerCase()=="firstList" || allWords[i].toLowerCase()=="secondList")
+				if (allWords[i].toLowerCase()=="firstlist" || allWords[i].toLowerCase()=="secondlist")
 				{
 					//Set the chosen list to the list specified in that cell
-					chosenList = allWords[i];
+					chosenList = getListByName(allWords[i]);
 				}
 				else
 				{
 					//Add the word to the last specified list
-					chosenList.push(allWords[i])
+					chosenList.push(allWords[i]);
+					everyWord.push(allWords[i]);
 				}
 			}
 		}

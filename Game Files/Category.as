@@ -1,10 +1,15 @@
 ﻿package 
 {
-
+	/*The category class contains the mutual properties and methods
+	held within its subclasses, explained below. The one method which
+	doesn’t require polymorphism is the getRandomWords method.*/
 	public class Category
 	{
 		public var name:String;
 		public var everyWord:Array = new Array();
+		
+		//size specifies the number of categories
+		public var size:uint;
 
 		//Constructor
 		public function Category(categoryName:String)
@@ -12,19 +17,19 @@
 			name = categoryName;
 		}
 
+		//Receives an array, and sets it to the correct lists
 		public function setWordsTo(allWords:Array):void
 		{
-			//Receives an array, and sets it to the correct lists
+			
 		}
 
-		//Set and Get Methods
+		//getListByName returns a list of the category depending on a string parameter (This is to be overridden by all except CategorySmall)
 		public function getListByName(aName:String):Array
 		{
-			var blehblehbleh:Array = new Array();
-			//recieves a string name, and returns the corresponding list
-			return (blehblehbleh);
+			return(everyWord);
 		}
 
+		//getRandomWords receives a string value, and randomises then returns that value’s corresponding list of words.
 		public function getRandomWords(listName:String):Array
 		{
 			listName = listName.toLowerCase();

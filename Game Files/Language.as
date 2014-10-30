@@ -1,6 +1,9 @@
 ﻿package 
 {
-
+	/*The language class has eleven instantiated categories, one for every category
+	available in the program. This class is used mainly for category coordination,
+	and also allows for the ten different instances of languages in the game, each
+	with a unique set of words.*/
 	public class Language extends Object
 	{
 		//Basics
@@ -29,9 +32,9 @@
 			name = langName;
 		}
 
+		//Returns a Category based on a corresponding string value
 		public function getCategoryByName(aName:String):Category
 		{
-			//Returns a Category based on a corresponding string value
 			var returnCategory:Category;
 			//Searches every category in the language
 			for (var i:uint = 0; i < allCategories.length; i++)
@@ -50,9 +53,9 @@
 			}
 			else
 			{
-				//Otherwise, an error message goes up and a placeholder category is returned.
+				//Otherwise, an error message goes up for the programmer, and a placeholder category is returned.
 				trace("No category was found from the name: " + aName);
-				return (commonVerbs);
+				return (commonNouns);
 			}
 		}
 	}

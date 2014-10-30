@@ -1,21 +1,20 @@
 ﻿package 
 {
-
+	//The large category contains three lists of words, organised as Easy, Medium and Hard
 	public class CategoryLarge extends Category
 	{
-
-		//There are so many words, they are best listed by difficulty
+		//There are three subcategories in total
 		public var easyList:Array = new Array();
 		public var mediumList:Array = new Array();
 		public var hardList:Array = new Array();
 
-		public var num:uint = 3;
-
 		public function CategoryLarge(categoryName:String):void
 		{
 			super(categoryName);
+			size = 3;
 		}
 
+		//getListByName returns a list of the category depending on a string parameter (This is to be overridden by all except CategorySmall)
 		override public function getListByName(aName:String):Array
 		{
 			aName = aName.toLowerCase();
@@ -38,17 +37,19 @@
 			}
 		}
 
+		//Receives an array, and sets it to the correct lists
 		override public function setWordsTo(allWords:Array):void
 		{
 			//Resets all of the arrays, in order for them to be written to
 			easyList.splice(0, easyList.length);
 			mediumList.splice(0, mediumList.length);
 			hardList.splice(0, hardList.length);
+			everyWord.splice(0, everyWord.length);
 
 			//The chosenList is the array which holds the value of the returned array
 			var chosenList:Array = easyList;
 
-			//The following For statement is necessary, as there is more than one word list.
+			//The following For statement is necessary, as there is more than one word list in a large category.
 			for (var i:uint = 0; i < allWords.length; i++)
 			{
 				//If the word is the name of one of the lists:
@@ -60,8 +61,8 @@
 				else
 				{
 					//Add the word to the last specified list
-					chosenList.push(allWords[i]);
-					everyWord.push(allWords[i]);
+					chosenList.push(allWords[i].toLowerCase());
+					everyWord.push(allWords[i].toLowerCase());
 				}
 			}
 		}

@@ -2,6 +2,8 @@
 {
 	import flash.utils.Timer;
 
+	/*This class handles the scoring, including bonus values, 
+	multipliers, penalties and calculations.*/
 	public class Score
 	{
 		//Common score-based properties
@@ -23,21 +25,25 @@
 		//Constructor
 		public function Score()
 		{
-
+			//No constructor
 		}
 
-		//Processes
+		//calcScore calculates the score, based on the variables passed on to this class during gameplay
 		public function calcScore():Number
 		{
 			//Sets the performance bonus, which is higher based on the number of correct answers
 			performanceBonus = numCorrect * 100;
 
+			//If penalties have been enabled, the performance bonus is decreased based on the number of incorrect answers
 			if (penaltyOnWrong)
 			{
 				performanceBonus -=  numIncorrect * 50;
 			}
 
-			//Sets the time bonus, which is higher depending on how long it took the player to complete the round
+			/*Sets the time bonus, which is higher depending on how long
+			it took the player to complete the round. This is only done if
+			the playTime is greater than the duration, as only then will 
+			it be positive, and therefore act as a bonus*/
 			if (playTime < duration)
 			{
 				timeBonus = (duration - playTime) * 50;
@@ -48,11 +54,12 @@
 				timeBonus = 0;
 			}
 
-			//The totalScore holds the value of all of these values put together
+			//The totalScore holds the value of all of these values put together, and multiplied by the difficulty multiplier
 			totalScore = (baseCompletionScore + performanceBonus + timeBonus) * difficultyMultiplier;
 			return (totalScore);
 		}
 		
+		//ResetScore resets all of the scores to allow for a new game to be started
 		public function resetScore()
 		{
 			numCorrect = 0;

@@ -24,7 +24,8 @@
 		public var colours:CategorySmall = new CategorySmall("colours");
 		public var countries:CategorySmall = new CategorySmall("countries");
 
-		public var allCategories:Array = new Array(commonNouns,commonVerbs,commonAdjectives,numbers,travel,family,phrases,activities,pronouns,colours,countries);
+		public var allCategories:Array = new Array(commonNouns,commonVerbs,commonAdjectives,numbers,travel,
+												   family,phrases,activities,pronouns,colours,countries);
 
 
 		public function Language(langName:String)

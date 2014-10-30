@@ -1,6 +1,7 @@
 ﻿package 
 {
-	//The small category contains a single, short list of words, already instantiated as the everyWord array
+	/*The small category contains a single, short list of words, 
+	already instantiated as the everyWord array*/
 	public class CategorySmall extends Category
 	{
 

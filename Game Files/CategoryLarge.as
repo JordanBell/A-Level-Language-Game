@@ -14,7 +14,7 @@
 			size = 3;
 		}
 
-		//getListByName returns a list of the category depending on a string parameter (This is to be overridden by all except CategorySmall)
+		//getListByName returns a list of the category depending on a string parameter
 		override public function getListByName(aName:String):Array
 		{
 			aName = aName.toLowerCase();
@@ -53,7 +53,10 @@
 			for (var i:uint = 0; i < allWords.length; i++)
 			{
 				//If the word is the name of one of the lists:
-				if (allWords[i].toLowerCase() == "easylist" || allWords[i].toLowerCase() == "mediumlist" || allWords[i].toLowerCase() == "hardlist")
+				var forEasyList:Boolean = (allWords[i].toLowerCase() == "easylist");
+				var forMediumList:Boolean = (allWords[i].toLowerCase() == "mediumlist");
+				var forHardList:Boolean = (allWords[i].toLowerCase() == "hardlist");
+				if (forEasyList || forMediumList || forHardList)
 				{
 					//Set the chosen list to the list specified in that cell
 					chosenList = getListByName(allWords[i]);

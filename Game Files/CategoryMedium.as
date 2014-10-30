@@ -14,7 +14,8 @@
 			size = 2;
 		}
 
-		//getListByName returns a list of the category depending on a string parameter (This is to be overridden by all except CategorySmall)
+		/*getListByName returns a list of the category depending on a string parameter 
+		(This is to be overridden by all except CategorySmall)*/
 		override public function getListByName(aName:String):Array
 		{
 			aName = aName.toLowerCase();

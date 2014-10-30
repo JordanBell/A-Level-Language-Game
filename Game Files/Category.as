@@ -23,7 +23,8 @@
 			//This is will be overridden, depending on the type of category
 		}
 
-		//getListByName returns a list of the category depending on a string parameter (This is to be overridden by all except CategorySmall)
+		/*getListByName returns a list of the category depending on a string parameter 
+		(This is to be overridden by all except CategorySmall)*/
 		public function getListByName(aName:String):Array
 		{
 			return(everyWord);

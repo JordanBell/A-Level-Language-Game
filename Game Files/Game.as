@@ -21,19 +21,22 @@
 		public var chosenCategory:String;
 		//The subcategory provides a finer list of words
 		public var chosenSubcategory:String;
-		//Depending on the chosenFormat, the game will respond differently (ie english words will be output, rather than foreign ones)
+		/*Depending on the chosenFormat, the game will respond differently 
+		(ie english words will be output, rather than foreign ones)*/
 		public var chosenFormat:String;
 
 		//These lingual variables hold the words used by the game
-		public var currentWordlist:Array = new Array  ;
+		public var currentWordlist:Array = new Array();
 		public var currentWord:String;
 
 		//The following gameplay variables are used for the mechancis of the game
 		//The useTimer boolean will determine whether or not the player is restricted by a time limit and/or recieve a time bonus
 		public var useTimer:Boolean;
-		//The round number starts at -1, because it is initially increased before being used in an array, allowing for it to access the first index (0) or the array
+		/*The round number starts at -1, because it is initially increased before
+		being used in an array, allowing for it to access the first index (0) or the array*/
 		public var round:int = -1;
-		//the totalRounds variable limits how many rounds take place in the game. This changes based on the length of words held in the currentWordList
+		/*the totalRounds variable limits how many rounds take place in the game. 
+		This changes based on the length of words held in the currentWordList*/
 		public var totalRounds:uint;
 
 		//A score handler is instantiated, as every game will have a score (see the Score class for a description of how it works)
@@ -127,7 +130,8 @@
 
 			//Finally, sets the total Rounds and game duration, based on the number of words in the list
 			totalRounds = currentWordlist.length;
-			//The length of the duration is less, as the difficulty increases, giving 3 seconds per round on Hard, and 5 seconds per round on Medium
+			/*The length of the duration is less, as the difficulty increases, 
+			giving 3 seconds per round on Hard, and 5 seconds per round on Medium*/
 			score.duration = totalRounds * (9 - (2 * score.difficultyMultiplier));
 
 			//Resets the currentWord value to that of the first word in the given list
@@ -243,7 +247,11 @@
 		the language translating from, the langage translating to,
 		and optionally accepts the category and subcategory it can
 		be found in in order to be more efficient*/
-		public function translateWord(word:String, fromLang:Language = null, toLang:Language = null, category:String = null, subcategory:String = null):String
+		public function translateWord(word:String, 
+									  fromLang:Language = null, 
+									  toLang:Language = null, 
+									  category:String = null, 
+									  subcategory:String = null):String
 		{
 			if (fromLang == null){ fromLang = LanguageGameHandler.outputLanguage; }
 			if (toLang == null){ toLang = LanguageGameHandler.inputLanguage; }
@@ -258,10 +266,12 @@
 			which will be overwritten if the word is found*/
 			var translatedWord:String = "Word not found. Sorry!";
 
-			//The following is the more efficient search algorithm, which is used when the category and subcategory parameters both contain a value
+			/*The following is the more efficient search algorithm, which is 
+			used when the category and subcategory parameters both contain a value*/
 			if ((category != null) && (subcategory != null))
 			{
-				//The fromList contains the list of words in the fromLang language parameter, in which the search word parameter is found
+				/*The fromList contains the list of words in the fromLang language 
+				parameter, in which the search word parameter is found*/
 				var fromList:Array = fromLang.getCategoryByName(category).getListByName(subcategory);
 				//The toList contains the list of words in the toLang language parameter, in which the translation should be found
 				var toList:Array = toLang.getCategoryByName(category).getListByName(subcategory);
@@ -272,16 +282,19 @@
 					//Goes through each word
 					if (fromList[h].toLowerCase() == word)
 					{
-						//When the word has been found in the fromList, its corresponding index is saved in the toList, giving the translated word.
+						/*When the word has been found in the fromList, its corresponding index 
+						is saved in the toList, giving the translated word.*/
 						translatedWord = toList[h];
 					}
 				}
 			}
 			else
 			{
-				//If the category and subcategory of the search word have not been included as a parameter, then we will need to find it ourselves.
+				/*If the category and subcategory of the search word have not 
+				been included as a parameter, then we will need to find it ourselves.*/
 				
-				//The indexes of the two arrays in which the word is found will be saved. They have default values that will be overwritten if found
+				/*The indexes of the two arrays in which the word is found will 
+				be saved. They have default values that will be overwritten if found*/
 				var index1:int = -1;
 				var index2:int = -1;
 
@@ -315,7 +328,8 @@
 		
 		/////////////////////Timer functions\\\\\\\\\\\\\\\\\\\\\\
 		
-		//If a timer is not currently set up, one is started. Otherwise, a duplicate is trying to be made and an error is sent to the programmer
+		/*If a timer is not currently set up, one is started. Otherwise, a 
+		duplicate is trying to be made and an error is sent to the programmer*/
 		public function startTimer()
 		{
 			if (timerOn == false)

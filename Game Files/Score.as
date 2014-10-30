@@ -9,17 +9,17 @@
 		//Common score-based properties
 		public var numCorrect:uint = 0;
 		public var numIncorrect:uint = 0;
-		public var playTime:Number = 0;
+		public var playTime:uint = 0;
 
-		public var duration:Number;
+		public var duration:uint;
 		public var penaltyOnWrong:Boolean;
-		public var difficultyMultiplier:Number;
+		public var difficultyMultiplier:uint;
 
 		//Score value components
-		public const baseCompletionScore:Number = 100;
+		public const baseCompletionScore:uint = 100;
 		public var timeBonus:Number = 0;
 		public var performanceBonus:Number = 0;
-		public var totalScore:Number = 0;
+		public var totalScore:int = 0;
 
 
 		//Constructor

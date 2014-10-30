@@ -48,6 +48,8 @@
 			{
 				timeBonus = (duration - playTime) * 50;
 				timeBonus *=  (numCorrect / 10);
+				//The value is rounded up, so that no long decimals are shown after calculation
+				timeBonus = Math.ceil(timeBonus);
 			}
 			else
 			{
@@ -56,6 +58,8 @@
 
 			//The totalScore holds the value of all of these values put together, and multiplied by the difficulty multiplier
 			totalScore = (baseCompletionScore + performanceBonus + timeBonus) * difficultyMultiplier;
+			//The value is rounded up, so that no long decimals are shown after calculation
+			totalScore = Math.ceil(totalScore);
 			return (totalScore);
 		}
 		

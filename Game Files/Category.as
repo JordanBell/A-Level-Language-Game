@@ -20,7 +20,7 @@
 		//Receives an array, and sets it to the correct lists
 		public function setWordsTo(allWords:Array):void
 		{
-			
+			//This is will be overridden, depending on the type of category
 		}
 
 		//getListByName returns a list of the category depending on a string parameter (This is to be overridden by all except CategorySmall)

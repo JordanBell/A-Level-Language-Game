@@ -10,19 +10,11 @@
 	{
 
 		//All of the games are instantiated, as well as a 'current game' variable to hold a copy of the game chosen by the user
-		public var FlashCards:Game = new Game("FlashCards");
-		public var Choices:Game = new Game("Choices");
-		public var Countries:Game = new Game("Countries");
-		public var SentenceFiller:Game = new Game("SentenceFiller");
-		public var currentGame:Game = FlashCards;
-		
-		/*The variables of inputLanguage and outputLanguage change depending
-		on what the user chooses. English is always either the input or output
-		language, depending on the format chosen by the user during the game*/
-		public var inputLanguage:Language;
-		public var outputLanguage:Language;
-		//An expectedAnswer variable is used to compare the given answer to the correct one
-		public var expectedAnswer:String;
+		public var flashCards:FlashCards = new FlashCards("FlashCards");
+		public var choices:Choices = new Choices("Choices");
+		public var countries:Game = new Game("Countries");
+		public var sentenceFiller:Game = new Game("SentenceFiller");
+		public var currentGame:Game = flashCards;
 
 		//Instantiates all 10 languages
 		public var English:Language = new Language("English");
@@ -37,37 +29,30 @@
 		public var Portuguese:Language = new Language("Portuguese");
 		//An allLanguages array holds every language, in case they ever need to be cycled through while traversing or searching through them
 		public var allLanguages:Array = new Array(English,Spanish,French,Italian,German,Japanese,Finnish,Turkish,Dutch,Portuguese);
-
-		//The word set array temporarily holds all of the words being added to a language category (see the constructor)
-		public var wordSetArray:Array = new Array();
+		
+		/*The variables of inputLanguage and outputLanguage change depending
+		on what the user chooses. English is always either the input or output
+		language, depending on the format chosen by the user during the game.
+		These are static in order to be accessed by the Game classes in the
+		submitAnswer methods.*/
+		public static var inputLanguage:Language;
+		public static var outputLanguage:Language;
 
 		//The constructor sets the Word Database
 		public function LanguageGameHandler()
 		{
-			
-			//TOTAL WORDS: 304 per language - 3,040 in total
+			//The word set array temporarily holds all of the words being added to a language category
+			var wordSetArray:Array = new Array();
 			
 			////////////////////////////////////////////////////////////////////ENGLISH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
-			
-			
 			//Nouns
-			
-			//Easy: 24
-			//Medium: 22
-			//Hard: 18
-			//Total: 64
 			wordSetArray.push(	"easyList", "dog", "cat", "man", "woman", "girl", "boy", "car", "coffee", "beach", "house", "food", "drink", "me", "child", "bird", "book", "table", "chair", "phone", "shop", "bed", "day", "tea", "tourist", 
 								"mediumList", "animal", "person", "waiter", "sir", "money", "madam", "plane", "boat", "train", "bus", "river", "breakfast", "lunch", "dinner", "road", "dessert", "desert", "bathroom", "name", "waiter", "hotel", "english",
 								"hardList", "elevator", "apartment", "grocery store", "taxi", "air port", "train station", "restaurant", "building", "traffic", "spanish", "german", "italian", "french", "portuguese", "turkish", "finnish", "dutch", "japanese");
 			English.commonNouns.setWordsTo(wordSetArray);
 			
 			//Verbs
-			
-			//Easy: 12
-			//Medium: 11
-			//Hard: 9
-			//Total: 32
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "help", "go", "talk", "see", "get", "run", "walk", "hear", "read", "buy", "sell", "phone",
 								"mediumList", "text", "take", "drive", "wait", "speak", "swim", "learn", "sleep", "give", "sit", "stand",
@@ -75,11 +60,6 @@
 			English.commonVerbs.setWordsTo(wordSetArray);
 			
 			//Adjectives
-			
-			//Easy: 10
-			//Medium: 10
-			//Hard: 9
-			//Total: 29
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "good", "bad", "pretty", "ugly", "big", "small", "happy", "sad", "cold", "hot", 
 								"mediumList", "tired", "tall", "short", "smart", "dumb", "angry", "loud", "quiet", "fast", "slow", 
@@ -87,11 +67,6 @@
 			English.commonAdjectives.setWordsTo(wordSetArray);
 			
 			//Numbers
-			
-			//Easy: 11
-			//Medium: 9
-			//Hard: 12
-			//Total: 32
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
 								"mediumList", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "one hundred", 
@@ -99,11 +74,6 @@
 			English.numbers.setWordsTo(wordSetArray);
 			
 			//Travel
-			
-			//Easy: 17
-			//Medium: 14
-			//Hard: 11
-			//Total: 42
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "house", "me", "buy", "go", "phone", "shop", "car", "drive", "walk", "run", "cycle", "train", "bus", "speak", "eat", "drink", "hotel",
 								"mediumList", "sir", "madam", "breakfast", "lunch", "dinner", "road", "travel", "borrow", "taxi", "money", "hello", "boat", "plane", "beach",
@@ -113,30 +83,18 @@
 			
 			
 			//Family
-			
-			//First: 6
-			//Second: 7
-			//Total: 13
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"firstList", "father", "mother", "brother", "sister", "son", "daughter",
 								"secondList", "uncle", "aunt", "grandfather", "grandmother", "cousin", "nephew", "niece");
 			English.family.setWordsTo(wordSetArray);
 			
 			//Phrases
-			
-			//First: 8
-			//Second: 7
-			//Total: 15
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"firstList", "hello", "good morning", "good afternoon", "good evening", "good night", "goodbye", "I don't understand", "my name is-", 
 								"secondList", "how much is-", "do you speak-", "where is-", "how much is-", "excuse me", "thank you", "you're welcome");
 			English.phrases.setWordsTo(wordSetArray);
 
 			//Activities
-			
-			//First: 10
-			//Second: 9
-			//Total: 19
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"firstList", "football", "tennis", "basketball", "hockey", "golf", "cricket", "baseball", "rugby", "badminton", "squash", 
 								"secondList", "shopping", "walking", "swimming", "reading", "horse riding", "music", "sunbathing", "relaxing", "sight seeing");
@@ -145,23 +103,17 @@
 			
 			
 			//Pronouns
-			
-			//Total: 9
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("I", "he", "she", "they", "us", "they", "you", "you", "it");
 			English.pronouns.setWordsTo(wordSetArray);
 			
 			//Colours
-			
-			//Total: 11
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("red", "orange", "yellow", "blue", "purple", "black", "white", "green", "pink", "grey", "brown");
 			English.colours.setWordsTo(wordSetArray);
 			
 			
 			//Countries
-			
-			//Total: 18
 			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push("america", "canada", "england", "australia", "france", "spain", "mexico", "brazil", "germany", "russia", "sweden", "china", "japan", "india", "holland", "egypt", "italy", "turkey");
 			English.countries.setWordsTo(wordSetArray);
@@ -508,7 +460,7 @@
 			
 			//Numbers
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", "zero", "ichi", "ni", "yon", "shi", "go", "roku", "nana", "hachi", "kyu", "juu",
+			wordSetArray.push(	"easyList", "zero", "ichi", "ni", "san", "shi", "go", "roku", "nana", "hachi", "kyu", "juu",
 								"mediumList", "nijuu", "sanjuu", "yonjuu", "gojuu", "rokujuu", "nanajuu", "hachijuu", "kyujuu", "hyaku", 
 								"hardList", "nihyaku", "sanbyaku", "yonhyaku", "gohyaku", "roppyaku", "nanhyaku", "happyaku", "kyuhyaku", "sen", "man", "mansen", "sensen");
 			Japanese.numbers.setWordsTo(wordSetArray);
@@ -711,11 +663,12 @@
 			wordSetArray.push(	"Amerika", "kanada", "İngiltere", "avustralya", "fransa", "İspanya", "meksika", "brezilya", "almanya", "rusya", "isveç", "Çin", "japonya","hindistan","hollanda","Mısır","İtalya","türkiye");
 			Turkish.countries.setWordsTo(wordSetArray);
 			
+			
 			////////////////////////////////////////////////////////////////////DUTCH\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 			
 			
-			
 			//Nouns
+			wordSetArray.splice(0, wordSetArray.length);
 			wordSetArray.push(	"easyList", "hond", "kat", "man", "vrouw", "meisje", "jongen", "auto", "koffie", "strand", "huis", "levensmiddelenbedrijf", "drinken","mij","kind","vogel","boek","tafel","stoel","telefoon","winkelen","bed","dag","thee","toeristische",
 								"mediumList", "dier", "persoon", "ober", "meneer", "geld", "mevrouw", "vliegtuig", "boot", "trein", "bus", "rivier", "ontbijt","lunch","diner","weg","dessert","woestijn","badkamer","naam","ober","hotel","engels",
 								"hardList", "lift", "appartement", "supermarkt", "taxi", "lucht haven", "station", "restaurant", "gebouw", "verkeer", "spaans", "duits", "italiaans", "frans", "portugees", "turks", "finse", "nederlands", "japanse");
@@ -866,7 +819,7 @@
 			Portuguese.countries.setWordsTo(wordSetArray);
 		}
 
-		/*The MEGAWORDTRACEGO method is used entirely for the programmer, 
+		/*The MEGAWORDTRACEGO method is used entirely by and for the programmer, 
 		as it traces every single word held by the languages (in the constructor)*/
 		public function MEGAWORDTRACEGO():void
 		{
@@ -883,7 +836,7 @@
 						if (allLanguages[i].allCategories[j].size == 1)
 						{
 							//If size = 1, the category is Small
-							trace("Language: " + allLanguages[i].name + ", Category: " + allLanguages[i].allCategories[j].name + ", Word List: MAIN, is:     " + allLanguages[i].allCategories[j].wordList);
+							trace("Language: " + allLanguages[i].name + ", Category: " + allLanguages[i].allCategories[j].name + ", Word List: MAIN, is:     " + allLanguages[i].allCategories[j].everyWord);
 						}
 						else if (allLanguages[i].allCategories[j].size == 2)
 						{
@@ -967,53 +920,6 @@
 			
 			//Returnsthe compiled list
 			return(returnLang);
-		}
-		
-		//The submitAnswer will function differently for each game type, due to their differing AI
-		public function submitAnswer(gameType:Game, inputText:String):Boolean
-		{
-			//The inputText parameter is set to lower case to allow for any format discrepancies
-			inputText = inputText.toLowerCase();
-			
-			//This switch statement will find which gametype to respond to depending on the name of the gameType parameter
-			switch (gameType.name)
-			{
-				case "FlashCards" :
-					//The expected answer is the translation of the current word
-					expectedAnswer = currentGame.translateWord(currentGame.currentWord, outputLanguage, inputLanguage, currentGame.chosenCategory, currentGame.chosenSubcategory);
-					
-					//Respond, depending on whether than answer was correct.
-					if (inputText == expectedAnswer)
-					{
-						//If it's correct, increase the count of correct answers
-						currentGame.score.numCorrect++;
-					}
-					else
-					{
-						//Otherwise, increase the count of incorrect answers
-						currentGame.score.numIncorrect++;
-					}
-					
-					//The method then returns a boolean value equal to whether or not the answer was correct
-					return (inputText == expectedAnswer);
-					break;
-				case "Choices" :
-					//The Choices game has been removed due to time restraints
-					return (true);
-					break;
-				case "Countries" :
-					//The Choices game has been removed due to time restraints
-					return (true);
-					break;
-				case "SentenceFiller" :
-					//The Choices game has been removed due to time restraints
-					return (true);
-					break;
-				default :
-					//If, for some reason, the game name was not recognised, then an error message will be shown to the prorgammer.
-					trace("ERROR: Game type name not recognised in the method SubmitAnswer under the LanguageGameHandler class.");
-					return (true);
-			}
 		}
 	}
 }

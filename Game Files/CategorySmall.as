@@ -1,21 +1,25 @@
-﻿package  {
-	
+﻿package 
+{
+
 	public class CategorySmall extends Category
 	{
-		
-		public var hiThere:WordList = new WordList("wordList");
+		public var wordList:Array = new Array();
 
-		allLists.push(hiThere);
-		
-		public function CategorySmall(categoryName:String) {
+		public function CategorySmall(categoryName:String)
+		{
 			super(categoryName);
 		}
-		
-		override public function setWordsTo(allWords:WordList)
-		{		
+
+		override public function getListByName(aName:String):Array
+		{
+			return (wordList);
+		}
+
+		override public function setWordsTo(allWords:Array):void
+		{
 			//Resets all of the arrays, in order for them to be written to
-			hiThere.splice(0, hiThere.length);
-			hiThere = allWords;
+			wordList.splice(0, wordList.length);
+			wordList = allWords;
 		}
 	}
 }

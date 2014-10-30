@@ -11,7 +11,8 @@
 
 		//User selected
 		//WARNING: the difficulty value must be set through the method, or else the corresponding effects won't take place.
-		public var chosenDifficulty:String;
+		public var chosenGameDifficulty:String;
+		public var chosenSubcategory:String;
 		public var chosenCategory:String;
 		public var chosenFormat:String;
 
@@ -22,7 +23,6 @@
 		//Gameplay
 		public var useTimer:Boolean;
 		public var round:int = -1;
-		public var totalRounds:uint;
 
 		//Score
 		public var score:Score = new Score();
@@ -39,36 +39,35 @@
 		
 		
 		//Property editting
-		public function settingsTo(lang:Language, cate:String, diff:String):void
+		public function settingsTo(lang:Language, cate:String, gameDiff:String, subcat:String):void
 		{
-			setDifficulty(diff);
+			setGameDifficulty(gameDiff);
+			setSubcategory(Subcat);
 			setCategory(cate);
-
-			//And hence sets the current list of words
-			setWordlist(lang.getCategoryByName(cate).getRandomWords(diff));
+			
+			//Sets the chosenWordList, depending on difficulty
+			setWordlist(lang.getCategoryByName(cate).getRandomWords(subcat));
 		}
 		public function setCategory(aCategory:String)
 		{
 			chosenCategory = aCategory;
 		}
-		public function setDifficulty(diff:String):void
+		public function setGameDifficulty(diff:String):void
 		{
 			//Literally, sets the difficulty.
-			chosenDifficulty = diff;
+			chosenGameDifficulty = diff.toLowerCase();
 
 			//Hence sets the difficulty-based properties
-			switch (chosenDifficulty.toLowerCase())
+			switch (chosenGameDifficulty)
 			{
 				case "easy" :
 					//Only on easy difficulty will there we no timer
-					totalRounds = 10;
 					useTimer = false;
 					score.penaltyOnWrong = false;
 					score.difficultyMultiplier = 1;
 					score.duration = totalRounds * 2.5;
 					break;
 				case "medium" :
-					totalRounds = 10;
 					useTimer = true;
 					score.penaltyOnWrong = false;
 					score.difficultyMultiplier = 2;
@@ -76,16 +75,19 @@
 					break;
 				case "hard" :
 					//Only hard difficulty adds a penalty for incorrect answers
-					totalRounds = 10;
 					useTimer = true;
 					score.penaltyOnWrong = true;
 					score.difficultyMultiplier = 3;
 					score.duration = totalRounds * 1.5;
 					break;
 				default :
-					trace("Error: The difficulty was not recognised in the setDifficulty method, under the Game class.");
-					chosenDifficulty = "ERROR_DifficultyName";
+					trace("Error: The difficulty was not recognised in the setGameDifficulty method, under the Game class.");
 			}
+		}
+		public function setSubcategory(diff:String):void
+		{
+			//Literally, sets the difficulty.
+			chosenSubcategory = diff.toLowerCase();
 		}
 		public function setWordlist(wordlist:Array):void
 		{
@@ -97,19 +99,10 @@
 		}
 		public function nextRound():void
 		{
-			//The condition checks to see if the language, category and difficulty has been set before starting the game.
-			if ((chosenCategory != null) && (chosenDifficulty != null))
-			{
-				//Increase the round
-				round++;
-				//And set the current word based on that round number
-				currentWord = currentWordlist[round];
-			}
-			else
-			{
-				//An error message is sent if any of the settings are null.
-				trace("ERROR: Required settings, (Language, Category and Difficulty) have not all been set!");
-			}
+			//Increase the round
+			round++;
+			//And set the current word based on that round number
+			currentWord = currentWordlist[round];
 		}
 		public function resetGameStats():void
 		{
@@ -119,7 +112,7 @@
 		
 		
 		//Processes
-		public function translateWord(fromLang:Language, toLang:Language, word:String):String
+		public function translateWord(fromLang:Language, toLang:Language, category:Category, word:String):String
 		{
 			//Resets the word parameter to its lowercase version, allowing a degree of freedom with the input
 			word = word.toLowerCase();

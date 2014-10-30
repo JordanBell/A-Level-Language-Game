@@ -11,8 +11,8 @@
 
 		//User selected
 		//WARNING: the difficulty value must be set through the method, or else the corresponding effects won't take place.
-		public var chosenDifficulty:String;
-		public var chosenLanguage:Language;
+		public var chosenGameDifficulty:String;
+		public var chosenWordDifficulty:String;
 		public var chosenCategory:String;
 		public var chosenFormat:String;
 
@@ -28,7 +28,14 @@
 
 		//Score
 		public var score:Score = new Score();
-		
+
+		public function Game(gameType:String):void
+		{
+			//Sets the properties which are based on the type of game.
+			name = gameType;
+			gameFrameName = "Game_" + gameType;
+			settingsFrameName = "Settings_" + gameType;
+		}
 
 		public function settingsTo(lang:Language, cate:String, diff:String):void
 		{
@@ -41,41 +48,26 @@
 			setWordlist(lang.getCategoryByName(cate).getWordsPerDifficulty(diff));
 		}
 
-		public function Game(gameType:String):void
-		{
-			//Sets the properties which are based on the type of game.
-			name = gameType;
-			gameFrameName = "Game_" + gameType;
-			settingsFrameName = "Settings_" + gameType;
-		}
-
-		public function setLanguage(aLanguage:Language)
-		{
-			chosenLanguage = aLanguage;
-		}
-
 		public function setCategory(aCategory:String)
 		{
 			chosenCategory = aCategory;
 		}
 
-		public function setDifficulty(diff:String):void
+		public function setGameDifficulty(diff:String):void
 		{
 			//Literally, sets the difficulty.
-			chosenDifficulty = diff;
+			chosenGameDifficulty = diff;
 
 			//Hence sets the difficulty-based properties
 			switch (chosenDifficulty.toLowerCase())
 			{
 				case "easy" :
 					//Only on easy difficulty will there we no timer
-					totalRounds = 10;
 					useTimer = false;
 					score.penaltyOnWrong = false;
 					score.difficultyMultiplier = 0.8;
 					break;
 				case "medium" :
-					totalRounds = 15;
 					useTimer = true;
 					score.penaltyOnWrong = false;
 					score.difficultyMultiplier = 1.0;
@@ -107,7 +99,7 @@
 		public function nextRound():void
 		{
 			//The condition checks to see if the language, category and difficulty has been set before starting the game.
-			if ((chosenLanguage != null) && (chosenCategory != null) && (chosenDifficulty != null))
+			if ((chosenCategory != null) && (chosenDifficulty != null))
 			{
 				//Increased the round
 				round++;

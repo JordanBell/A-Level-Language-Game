@@ -4,15 +4,14 @@
 	public class Category
 	{
 		public var name:String;
-		public var allLists:Array;
-		
+
 		//Constructor
 		public function Category(categoryName:String)
 		{
 			name = categoryName;
 		}
 
-		public function setWordsTo(allWords:Array)
+		public function setWordsTo(allWords:Array):void
 		{
 			//Receives an array, and sets it to the correct lists
 		}
@@ -20,23 +19,15 @@
 		//Set and Get Methods
 		public function getListByName(aName:String):Array
 		{
-			var returnList:Array;
-			//Returns a word list based on its string value
-			for (var i:uint = 0; i < allLists.length; i++)
-			{
-				if (allLists[i].name == aName)
-				{
-					returnList = allLists[i];
-				}
-			}
-			
-			return(returnList);
+			var blehblehbleh:Array = new Array();
+			//recieves a string name, and returns the corresponding list
+			return(blehblehbleh);
 		}
-		
+
 		public function getRandomWords(listName:String):Array
 		{
 			listName = listName.toLowerCase();
-			
+
 			//The outputList holds the words as they are set, which is eventually returned 
 			var outputList:Array = new Array();
 			//The copyList variable acts as an editable copy of the array of a given listName

@@ -31,7 +31,7 @@
 
 		public function getCategoryByName(aName:String):Category
 		{
-			//Returns a Category based on its Name property
+			//Returns a Category based on a corresponding string value
 			var returnCategory:Category;
 			//Searches every category in the language
 			for (var i:uint = 0; i < allCategories.length; i++)

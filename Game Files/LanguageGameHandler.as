@@ -174,7 +174,7 @@
 			
 			//Nouns
 			wordSetArray.splice(0, wordSetArray.length);
-			wordSetArray.push(	"easyList", "perro", "gato", "hombre", "mujer", "hermoso", "joven", "coche", "café", "playa", "casa", "comida", "bebida", "me", "niño", "ave", "libro", "mesa", "silla", "teléfono", "tienda", "cama", "día", "tazas", "turista",
+			wordSetArray.push(	"easyList", "perro", "gato", "hombre", "mujer", "chica", "chico", "coche", "café", "playa", "casa", "comida", "bebida", "me", "niño", "ave", "libro", "mesa", "silla", "teléfono", "tienda", "cama", "día", "tazas", "turista",
 								"mediumList", "animal", "persona", "camarero", "señor", "dinero", "señora", "plan", "barco", "tren", "autobús", "rio", "desayuno", "almuerzo", "cena", "carretera", "postre", "desierto","cuarto de baño","nombre","camarero","hotel","inglés",
 								"hardList", "ascensor", "apartamento", "supermercado", "taxi", "puerto de aire", "estación de tren", "restaurant", "edificio", "tráfico", "españoles", "alemán" , "italian", "francés", "portugués", "turco", "finlandia", "dutch", "japanese");
 			Spanish.commonNouns.setWordsTo(wordSetArray);
